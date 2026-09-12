@@ -1,0 +1,5 @@
+Page background: #FFF8F3 
+Logo: #6B4F45
+Navigation text: #6B4F45 
+Hover: #E8B4B8 
+Cart background: #FFF8F3 
