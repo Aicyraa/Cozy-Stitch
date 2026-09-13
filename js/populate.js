@@ -1,0 +1,59 @@
+import { storage_save } from "./storage.js";
+
+class Crochet {
+   constructor (id, name, description, category, price, size, total_sold, rating, stock, date_added) {
+      this.id = id;
+      this.name = name;
+      this.description = description;
+      this.category = category;
+      this.price = price;
+      this.size = size;
+      this.total_sold = total_sold;
+      this.rating = rating;
+      this.stock = stock;
+      this.date_added = date_added;
+   }
+}
+
+export default function seed() {
+   const data = [
+      // Bags
+      [1, "Pink Striped Crossbody Bag", "Crochet pink and white striped shoulder bag with button closure", "bags", 18.99, "Medium", 12, 4.8, 15, "2026-01-10"],
+      [2, "Cream Drawstring Bucket Bag", "Textured cream crochet drawstring bag with tassel accents", "bags", 22.50, "Medium", 8, 4.9, 10, "2026-01-15"],
+      [3, "Blue Floral Tote Bag", "Solid blue crochet handbag with embroidered flower detail", "bags", 25.00, "Large", 15, 4.7, 8, "2026-02-01"],
+      [4, "Gingham Coin Purse Bag", "Yellow and white checkered crochet clasp frame bag", "bags", 12.00, "Small", 30, 5.0, 25, "2026-02-10"],
+      [5, "Teal Mini Flap Bag", "Compact teal crochet crossbody bag with button flap", "bags", 14.50, "Small", 18, 4.6, 20, "2026-02-18"],
+
+      // Anime Characters
+      [6, "Sailor Moon Amigurumi", "Handmade Sailor Moon inspired crochet doll", "anime", 28.00, "Medium", 45, 4.9, 5, "2026-01-05"],
+      [7, "Totoro Plushie", "Grey Totoro crochet plush with white belly details", "anime", 20.00, "Medium", 60, 5.0, 12, "2026-01-12"],
+      [8, "Tanjiro Kamado Figure", "Demon Slayer inspired Tanjiro crochet character with checkered haori", "anime", 26.50, "Medium", 38, 4.8, 7, "2026-01-22"],
+      [9, "Pikachu Amigurumi", "Bright yellow Pikachu crochet doll with iconic ears", "anime", 19.99, "Small", 85, 4.9, 18, "2026-02-03"],
+      [10, "Nezuko Kamado Doll", "Nezuko inspired crochet plush with bamboo mouthpiece", "anime", 26.50, "Medium", 42, 5.0, 6, "2026-02-14"],
+
+      // Accessories / Keychains
+      [11, "Puffy Star Keychain", "Yellow crochet star bag charm with key ring", "accessories key chain", 6.50, "Small", 110, 4.8, 40, "2026-01-08"],
+      [12, "Macaron Charm Trio", "Set of pastel crochet macaron keychains", "accessories key chain", 9.99, "Small", 75, 4.7, 30, "2026-01-19"],
+      [13, "Dino Keychain", "Cute green dinosaur amigurumi key charm", "accessories key chain", 7.50, "Small", 95, 4.9, 22, "2026-01-28"],
+      [14, "Iced Coffee Cup Keychain", "Miniature crochet iced coffee cup with straw", "accessories key chain", 8.00, "Small", 130, 5.0, 35, "2026-02-05"],
+      [15, "Citrus Slices Keychain Set", "Bright lemon, orange, and lime crochet fruit slices", "accessories key chain", 8.50, "Small", 50, 4.6, 25, "2026-02-20"],
+
+      // Wallets
+      [16, "Brown Flap Wallet", "Textured brown crochet trifold wallet with button snap", "wallets", 15.00, "Medium", 20, 4.5, 12, "2026-01-11"],
+      [17, "Granny Square Pouch", "Colorful crochet granny square zippered pouch", "wallets", 13.50, "Small", 64, 4.9, 15, "2026-01-25"],
+      [18, "Minimalist Beige Card Holder", "Simple cream crochet card wallet with leather accent strap", "wallets", 11.00, "Small", 40, 4.7, 18, "2026-02-02"],
+      [19, "Color Block Zipper Wallet", "Multi-colored patched crochet pouch with zipper", "wallets", 14.00, "Medium", 29, 4.8, 10, "2026-02-12"],
+      [20, "Cream Coin Purse with Wristlet", "Beige crochet card holder with attached mini wristlet charm", "wallets", 12.50, "Small", 33, 4.6, 14, "2026-02-22"],
+
+      // Animals
+      [21, "Spotted Cow Amigurumi", "Cute black and white crochet cow plushie", "animals", 21.00, "Medium", 52, 5.0, 9, "2026-01-14"],
+      [22, "Penguin with Scarf", "Grey and white crochet penguin wearing a red scarf", "animals", 18.50, "Small", 47, 4.9, 11, "2026-01-20"],
+      [23, "Rainbow Caterpillar Plush", "Colorful segmented crochet caterpillar toy", "animals", 16.00, "Large", 28, 4.8, 8, "2026-01-30"],
+      [24, "Mini Ladybug Amigurumi", "Chubby red and black crochet ladybug", "animals", 7.00, "Small", 88, 4.9, 25, "2026-02-08"],
+      [25, "Classic Beige Bunny", "Soft beige crochet rabbit doll with pink collar", "animals", 22.00, "Medium", 61, 5.0, 7, "2026-02-16"]
+   ];
+
+   const instances = data.map(val => new Crochet(...val));
+   storage_save(instances);
+}
+

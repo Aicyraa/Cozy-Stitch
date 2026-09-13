@@ -1,0 +1,1 @@
+// HTML dynamic render
