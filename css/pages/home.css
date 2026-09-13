@@ -6,9 +6,8 @@ main {
 
 .hero {
    display: flex;
-   width: 100%;
-   padding: 3.5rem 7rem;
-   gap: 3rem;
+   padding: var(--space-9) 7rem;
+   gap: var(--space-8);
 }
 
 .hero-content {
@@ -19,39 +18,39 @@ main {
 }
 
 .hero-content h1 {
-   font-size: 3.5rem;
+   font-size: var(--fs-3xl);
    font-weight: bold;
    line-height: 1.2;
-   color: #6b4f45;
-   margin-bottom: 1rem;
+   color: var(--primary);
+   margin-bottom: var(--space-4);
 }
 
 .hero-content p {
-   font-size: 17px;
+   font-size: 1.0625rem;
    line-height: 1.7;
-
-   color: #80665c;
-
-   margin-bottom: 15px;
+   font-family: var(--font-description);
+   color: var(--primary-deep);
+   margin-bottom: 0.9375rem;
 }
 
 /* button */
 .shop-btn {
    display: inline-block;
-   margin-top: 1rem;
-   padding: 14px 140px;
+   margin-top: var(--space-4);
+   padding: 0.875rem 8.75rem;
    align-self: center;
-   background-color: #e8b4b8;
-   color: #ffffff;
+   background-color: var(--accent);
+   color: var(--white);
    text-decoration: none;
-   font-size: 1.5rem;
+   font-family: var(--font-heading);
+   font-size: var(--fs-lg);
    font-weight: bold;
-   border-radius: 30px;
-   transition: 0.3s ease;
+   border-radius: var(--radius-xl);
+   transition: var(--transition-base);
 }
 
 .shop-btn:hover {
-   background-color: #d8959c;
+   background-color: var(--accent-hover);
 }
 
 /* hero-right */
@@ -63,24 +62,16 @@ main {
    align-items: center;
 }
 
-.hero-visual img {
-   width: 100%;
-   max-width: 500px;
-   height: auto;
-   object-fit: contain;
-   padding-left: 4rem;
-}
-
 .visual-placeholder {
-   width: 400px;
-   height: 400px;
+   width: 25rem;
+   height: 25rem;
 
    display: flex;
    justify-content: center;
    align-items: center;
 
-   background-color: #f8e8e5;
-   border-radius: 50px;
+   background-color: var(--surface);
+   border-radius: 3.125rem;
 }
 
 /* hero-stats */
@@ -90,11 +81,11 @@ main {
    justify-content: center;
    align-items: center;
 
-   gap: 100px;
+   gap: 6.25rem;
 
    width: 100%;
-   margin-top: 15px;
-   margin-bottom: 5px;
+   margin-top: 0.9375rem;
+   margin-bottom: 0.3125rem;
 }
 
 .stat {
@@ -104,33 +95,31 @@ main {
 }
 
 .stat h2 {
-   font-size: 32px;
+   font-size: var(--fs-xl);
    font-weight: bold;
-   color: #6b4f45;
+   color: var(--primary);
 }
 
 .stat span {
-   margin-top: 5px;
-   font-size: 14px;
-   color: #80665c;
+   margin-top: 0.3125rem;
+   font-size: 0.875rem;
+   color: var(--primary-deep);
 }
 
 /* Best Product Carousel */
 
 .product-carousel {
-   /* background-color: #fff0ed; */
-   width: 100%;
-   padding: 0.25rem 0 4.0625rem;
+   padding: var(--space-1) 0 4.0625rem;
 }
 
 .product-carousel > div:first-child {
    display: flex;
    align-items: center;
-   gap: 1rem;
-   font-size: 32px;
+   gap: var(--space-4);
+   font-size: var(--fs-xl);
    font-weight: bold;
-   color: #6b4f45;
-   margin: 0 0 2rem 5.25rem;
+   color: var(--primary);
+   margin: 0 0 var(--space-6) 5.25rem;
 
    img {
       height: 1.875rem;
@@ -141,12 +130,11 @@ main {
 .product-carousel > div:first-child::after {
    content: '';
    flex: 1;
-   height: 1px;
-   background: linear-gradient(to right, rgba(107, 79, 69, 0.25), rgba(107, 79, 69, 0));
+   height: 0.0625rem;
+   background: var(--gradient-fade);
 }
 
 .carousel-viewport {
-   width: 100%;
    overflow: hidden;
    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
@@ -155,8 +143,8 @@ main {
 .carousel-track {
    display: flex;
    width: max-content;
-   gap: 22px;
-   padding: 10px 0;
+   gap: 1.375rem;
+   padding: 0.625rem 0;
    animation: carousel-scroll 40s linear infinite;
 }
 
@@ -166,8 +154,8 @@ main {
 
 .carousel-set {
    display: flex;
-   gap: 22px;
-   padding-right: 22px;
+   gap: 1.375rem;
+   padding-right: 1.375rem;
 }
 
 @keyframes carousel-scroll {
@@ -181,13 +169,13 @@ main {
 
 .product-card {
    position: relative;
-   width: 270px;
-   height: 350px;
-   border-radius: 18px;
+   width: 16.875rem;
+   height: 21.875rem;
+   border-radius: var(--radius-md);
    overflow: hidden;
    flex: 0 0 auto;
-   background-color: #f8e8e5;
-   box-shadow: 0 6px 4px rgba(107, 79, 69, 0.16);
+   background-color: var(--surface);
+   box-shadow: var(--shadow-card);
 }
 
 .product-image {
@@ -204,37 +192,33 @@ main {
    top: 0;
    left: 0;
    right: 0;
-   padding: 18px 20px 22px;
-   color: #ffffff;
-   background: linear-gradient(
-      to bottom,
-      rgba(43, 26, 20, 0.7),
-      rgba(43, 26, 20, 0.18) 60%,
-      transparent
-   );
+   padding: 1.125rem 1.25rem 1.375rem;
+   color: var(--white);
+   background: var(--gradient-cover);
 }
 
 .product-category {
-   font-size: 11px;
+   font-size: var(--fs-xs);
    font-weight: 600;
    text-transform: uppercase;
-   letter-spacing: 0.8px;
-   color: #f8e8e5;
-   margin-bottom: 7px;
+   letter-spacing: 0.05rem;
+   color: var(--surface);
+   margin-bottom: 0.4375rem;
 }
 
 .product-info h3 {
-   font-size: 18px;
+   font-size: var(--fs-md);
    font-weight: bold;
    line-height: 1.25;
-   margin-bottom: 8px;
+   margin-bottom: var(--space-2);
 }
 
 .product-description {
-   font-size: 12px;
+   font-size: 0.75rem;
    line-height: 1.55;
+   font-family: var(--font-description);
    opacity: 0.92;
-   margin-bottom: 10px;
+   margin-bottom: 0.625rem;
    display: -webkit-box;
    -webkit-line-clamp: 3;
    -webkit-box-orient: vertical;
@@ -245,23 +229,23 @@ main {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 10px;
+   gap: 0.625rem;
 }
 
 .product-price {
-   font-size: 17px;
+   font-size: 1.0625rem;
    font-weight: bold;
 }
 
 .product-rating {
    display: inline-flex;
    align-items: center;
-   gap: 4px;
-   font-size: 12px;
+   gap: var(--space-1);
+   font-size: 0.75rem;
    font-weight: bold;
-   padding: 4px 10px;
-   border-radius: 20px;
-   background: rgba(255, 255, 255, 0.28);
+   padding: 0.25rem 0.625rem;
+   border-radius: 1.25rem;
+   background: var(--on-dark-white);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -283,22 +267,21 @@ main {
 /* crochet scroll 2 */
 
 .crochet-section {
-   padding: 20px 60px;
+   padding: 1.25rem 3.75rem;
 }
 
 .crochet-content {
-   width: 100%;
-   max-width: 900px;
+   max-width: 56.25rem;
    margin: 0 auto;
    text-align: center;
 }
 
 .crochet-content h1 {
-   font-size: 52px;
+   font-size: var(--fs-2xl);
    line-height: 1.2;
    font-weight: bold;
-   color: #6b4f45;
-   margin-bottom: 45px;
+   color: var(--primary);
+   margin-bottom: 2.8125rem;
 }
 
 /* ==============================
@@ -307,56 +290,56 @@ main {
 
 .crochet-image {
    position: relative;
-   width: min(800px, 100%);
-   height: 400px;
+   width: min(50rem, 100%);
+   height: 25rem;
    margin: 0 auto;
    display: flex;
    align-items: center;
    justify-content: center;
-   border-radius: 50px;
-   perspective: 1200px;
+   border-radius: 3.125rem;
+   perspective: 75rem;
 }
 
 .crochet-image img {
-   box-shadow: 0 10px 30px rgba(107, 79, 69, 0.12);
    position: absolute;
    top: 50%;
    left: 50%;
    width: 56%;
    height: 84%;
    object-fit: cover;
-   border-radius: 24px;
-   box-shadow: 0 24px 40px rgba(107, 79, 69, 0.28);
+   border-radius: 1.5rem;
+   box-shadow: var(--shadow-img);
    backface-visibility: hidden;
 }
 
 /* middle image in front */
 .crochet-image > img:nth-child(2) {
-   transform: translate(-50%, -50%) translateZ(90px);
-   box-shadow: 0 0 0px #f1ddd800 !important;
+   transform: translate(-50%, -50%) translateZ(5.625rem);
+   box-shadow: 0 0 0 white;
    z-index: 3;
 }
 
 /* first image tucked behind the middle, fanned to the back-left */
 .crochet-image > img:nth-child(1) {
-   transform: translate(-50%, -50%) translateX(-70%) translateZ(-90px) rotateY(26deg)
+   transform: translate(-50%, -50%) translateX(-70%) translateZ(-5.625rem) rotateY(26deg)
       scale(0.9);
    z-index: 2;
 }
 
 /* last image tucked behind the middle, fanned to the back-right */
 .crochet-image > img:nth-child(3) {
-   transform: translate(-50%, -50%) translateX(70%) translateZ(-90px) rotateY(-26deg)
+   transform: translate(-50%, -50%) translateX(70%) translateZ(-5.625rem) rotateY(-26deg)
       scale(0.9);
    z-index: 1;
 }
 
 .crochet-content p {
-   max-width: 650px;
-   margin: 35px auto 0;
-   font-size: 17px;
+   max-width: 40.625rem;
+   margin: 2.1875rem auto 0;
+   font-size: 1.0625rem;
    line-height: 1.8;
-   color: #80665c;
+   font-family: var(--font-description);
+   color: var(--primary-deep);
 }
 
 /* ==============================
@@ -364,14 +347,13 @@ main {
 ================================= */
 
 .features {
-   width: 100%;
-   max-width: 1200px;
+   max-width: 75rem;
    margin: 0 auto;
-   padding: 80px 6%;
+   padding: var(--space-10) 6%;
 
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   gap: 25px;
+   gap: 1.5625rem;
 }
 
 /* ==============================
@@ -379,7 +361,7 @@ main {
 ================================= */
 
 .feature-card {
-   min-height: 150px;
+   min-height: 9.375rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -387,41 +369,40 @@ main {
 
    text-align: center;
 
-   padding: 1rem;
+   padding: var(--space-4);
 
-   background-color: #ffffff;
+   background-color: var(--white);
 
-   border: 1px solid #f1ddd8;
-   border-radius: 22px;
+   border: 0.0625rem solid var(--border);
+   border-radius: var(--radius-lg);
 
-   box-shadow: 0 8px 25px rgba(107, 79, 69, 0.08);
+   box-shadow: var(--shadow-feature);
 
    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease,
-      border-color 0.3s ease;
+      transform var(--transition-base),
+      box-shadow var(--transition-base),
+      border-color var(--transition-base);
 }
 
 .feature-card:hover {
-   transform: translateY(-8px);
+   transform: translateY(-0.5rem);
 
-   box-shadow: 0 15px 35px rgba(107, 79, 69, 0.14);
+   box-shadow: var(--shadow-feature-hover);
 
-   border-color: #e8b4b8;
+   border-color: var(--accent);
 }
 
 .feature-icon {
-   height: 100px;
+   height: 6.25rem;
    width: auto;
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-bottom: .25rem2;
+   margin-bottom: var(--space-1);
    border-radius: 50%;
-   font-size: 25px;
    transition:
-      transform 0.3s ease,
-      background-color 0.3s ease;
+      transform var(--transition-base),
+      background-color var(--transition-base);
 }
 
 .feature-card:hover .feature-icon {
@@ -429,8 +410,8 @@ main {
 }
 
 .feature-card h3 {
-   font-size: 18px;
+   font-size: var(--fs-md);
    font-weight: 600;
    line-height: 1.4;
-   color: #6b4f45;
+   color: var(--primary);
 }
