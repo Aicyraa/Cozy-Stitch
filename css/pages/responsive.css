@@ -138,3 +138,26 @@
         height: 240px;
     }
 }
+
+/* product carousel */
+@media (max-width: 768px) {
+    .product-carousel h4 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-carousel {
+        padding: 40px 0 45px;
+    }
+
+    .product-carousel h4 {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+
+    .product-card {
+        width: 220px;
+        height: 300px;
+    }
+}

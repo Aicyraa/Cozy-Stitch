@@ -1,0 +1,436 @@
+/* hero */
+
+main {
+   overflow: hidden;
+}
+
+.hero {
+   display: flex;
+   width: 100%;
+   padding: 3.5rem 7rem;
+   gap: 3rem;
+}
+
+.hero-content {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.hero-content h1 {
+   font-size: 3.5rem;
+   font-weight: bold;
+   line-height: 1.2;
+   color: #6b4f45;
+   margin-bottom: 1rem;
+}
+
+.hero-content p {
+   font-size: 17px;
+   line-height: 1.7;
+
+   color: #80665c;
+
+   margin-bottom: 15px;
+}
+
+/* button */
+.shop-btn {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 14px 140px;
+   align-self: center;
+   background-color: #e8b4b8;
+   color: #ffffff;
+   text-decoration: none;
+   font-size: 1.5rem;
+   font-weight: bold;
+   border-radius: 30px;
+   transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+   background-color: #d8959c;
+}
+
+/* hero-right */
+.hero-visual {
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+
+.hero-visual img {
+   width: 100%;
+   max-width: 500px;
+   height: auto;
+   object-fit: contain;
+   padding-left: 4rem;
+}
+
+.visual-placeholder {
+   width: 400px;
+   height: 400px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background-color: #f8e8e5;
+   border-radius: 50px;
+}
+
+/* hero-stats */
+
+.hero-stats {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   gap: 100px;
+
+   width: 100%;
+   margin-top: 15px;
+   margin-bottom: 5px;
+}
+
+.stat {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.stat h2 {
+   font-size: 32px;
+   font-weight: bold;
+   color: #6b4f45;
+}
+
+.stat span {
+   margin-top: 5px;
+   font-size: 14px;
+   color: #80665c;
+}
+
+/* Best Product Carousel */
+
+.product-carousel {
+   /* background-color: #fff0ed; */
+   width: 100%;
+   padding: 0.25rem 0 4.0625rem;
+}
+
+.product-carousel > div:first-child {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   font-size: 32px;
+   font-weight: bold;
+   color: #6b4f45;
+   margin: 0 0 2rem 5.25rem;
+
+   img {
+      height: 1.875rem;
+      width: auto;
+   }
+}
+
+.product-carousel > div:first-child::after {
+   content: '';
+   flex: 1;
+   height: 1px;
+   background: linear-gradient(to right, rgba(107, 79, 69, 0.25), rgba(107, 79, 69, 0));
+}
+
+.carousel-viewport {
+   width: 100%;
+   overflow: hidden;
+   -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.carousel-track {
+   display: flex;
+   width: max-content;
+   gap: 22px;
+   padding: 10px 0;
+   animation: carousel-scroll 40s linear infinite;
+}
+
+.product-carousel:hover .carousel-track {
+   animation-play-state: paused;
+}
+
+.carousel-set {
+   display: flex;
+   gap: 22px;
+   padding-right: 22px;
+}
+
+@keyframes carousel-scroll {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+.product-card {
+   position: relative;
+   width: 270px;
+   height: 350px;
+   border-radius: 18px;
+   overflow: hidden;
+   flex: 0 0 auto;
+   background-color: #f8e8e5;
+   box-shadow: 0 6px 4px rgba(107, 79, 69, 0.16);
+}
+
+.product-image {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+}
+
+.product-info {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 18px 20px 22px;
+   color: #ffffff;
+   background: linear-gradient(
+      to bottom,
+      rgba(43, 26, 20, 0.7),
+      rgba(43, 26, 20, 0.18) 60%,
+      transparent
+   );
+}
+
+.product-category {
+   font-size: 11px;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.8px;
+   color: #f8e8e5;
+   margin-bottom: 7px;
+}
+
+.product-info h3 {
+   font-size: 18px;
+   font-weight: bold;
+   line-height: 1.25;
+   margin-bottom: 8px;
+}
+
+.product-description {
+   font-size: 12px;
+   line-height: 1.55;
+   opacity: 0.92;
+   margin-bottom: 10px;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
+.product-bottom {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+.product-price {
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.product-rating {
+   display: inline-flex;
+   align-items: center;
+   gap: 4px;
+   font-size: 12px;
+   font-weight: bold;
+   padding: 4px 10px;
+   border-radius: 20px;
+   background: rgba(255, 255, 255, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .carousel-track {
+      animation: none;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set {
+      width: 100%;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set:nth-child(2) {
+      display: none;
+   }
+}
+
+/* crochet scroll 2 */
+
+.crochet-section {
+   padding: 20px 60px;
+}
+
+.crochet-content {
+   width: 100%;
+   max-width: 900px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.crochet-content h1 {
+   font-size: 52px;
+   line-height: 1.2;
+   font-weight: bold;
+   color: #6b4f45;
+   margin-bottom: 45px;
+}
+
+/* ==============================
+   IMAGE
+================================= */
+
+.crochet-image {
+   position: relative;
+   width: min(800px, 100%);
+   height: 400px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+   perspective: 1200px;
+}
+
+.crochet-image img {
+   box-shadow: 0 10px 30px rgba(107, 79, 69, 0.12);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 56%;
+   height: 84%;
+   object-fit: cover;
+   border-radius: 24px;
+   box-shadow: 0 24px 40px rgba(107, 79, 69, 0.28);
+   backface-visibility: hidden;
+}
+
+/* middle image in front */
+.crochet-image > img:nth-child(2) {
+   transform: translate(-50%, -50%) translateZ(90px);
+   box-shadow: 0 0 0px #f1ddd800 !important;
+   z-index: 3;
+}
+
+/* first image tucked behind the middle, fanned to the back-left */
+.crochet-image > img:nth-child(1) {
+   transform: translate(-50%, -50%) translateX(-70%) translateZ(-90px) rotateY(26deg)
+      scale(0.9);
+   z-index: 2;
+}
+
+/* last image tucked behind the middle, fanned to the back-right */
+.crochet-image > img:nth-child(3) {
+   transform: translate(-50%, -50%) translateX(70%) translateZ(-90px) rotateY(-26deg)
+      scale(0.9);
+   z-index: 1;
+}
+
+.crochet-content p {
+   max-width: 650px;
+   margin: 35px auto 0;
+   font-size: 17px;
+   line-height: 1.8;
+   color: #80665c;
+}
+
+/* ==============================
+   FEATURES SECTION
+================================= */
+
+.features {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 80px 6%;
+
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 25px;
+}
+
+/* ==============================
+   FEATURE CARD
+================================= */
+
+.feature-card {
+   min-height: 150px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   text-align: center;
+
+   padding: 1rem;
+
+   background-color: #ffffff;
+
+   border: 1px solid #f1ddd8;
+   border-radius: 22px;
+
+   box-shadow: 0 8px 25px rgba(107, 79, 69, 0.08);
+
+   transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+}
+
+.feature-card:hover {
+   transform: translateY(-8px);
+
+   box-shadow: 0 15px 35px rgba(107, 79, 69, 0.14);
+
+   border-color: #e8b4b8;
+}
+
+.feature-icon {
+   height: 100px;
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: .25rem2;
+   border-radius: 50%;
+   font-size: 25px;
+   transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+   transform: scale(1.08);
+}
+
+.feature-card h3 {
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 1.4;
+   color: #6b4f45;
+}
