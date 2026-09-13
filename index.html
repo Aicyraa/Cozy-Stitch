@@ -5,10 +5,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Cozy Stitch</title>
       <link rel="icon" type="image/png" href="assets/logo.png" />
-      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-
       <!-- Navbar -->
       <nav class="navbar">
          <div class="logo">
@@ -23,10 +22,7 @@
 
          <div class="cart">
             <a href="cart.html" aria-label="Shopping Cart">
-               <img
-                  src="assets/cart.png"
-                  alt="Shopping Cart"
-               />
+               <img src="assets/cart.png" alt="Shopping Cart" />
             </a>
          </div>
       </nav>
@@ -37,7 +33,11 @@
          <section class="hero">
             <div class="hero-content">
                <h1>Made by hand. Made to feel like home.</h1>
-               <p>Thoughtfully crocheted pieces that bring warmth, character, and a little more joy to your everyday. Discover cozy designs crafted with care, from our hands to your home.</p>
+               <p>
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday. Discover cozy designs crafted with care, from our hands
+                  to your home.
+               </p>
                <div class="hero-stats">
                   <div class="stat">
                      <h2>3K+</h2>
@@ -58,14 +58,14 @@
 
          <section class="product-carousel">
             <div>
-               <img src="assets/icon_1_heart.png" alt="">
-               <h4> Best Seller </h4>
+               <img src="assets/icon_1_heart.png" alt="" />
+               <h4>Best Seller</h4>
             </div>
             <div class="carousel-viewport">
-                  <div class="carousel-track">
-                     <!-- Best seller cards are injected by the script below -->
-                  </div>
+               <div class="carousel-track">
+                  <!-- Best seller cards are injected by the script below -->
                </div>
+            </div>
          </section>
 
          <section class="crochet-section">
@@ -77,29 +77,40 @@
                   <img src="./assets/crochets/pompumpurin.png" alt="" />
                </div>
                <p>
-                  From playful plushies to cozy keepsakes, every piece is
-                  crocheted by hand from premium yarn — one mindful stitch at a
-                  time. No two are ever exactly alike, and that's exactly what
-                  makes them special.
+                  From playful plushies to cozy keepsakes, every piece is crocheted by hand
+                  from premium yarn — one mindful stitch at a time. No two are ever exactly
+                  alike, and that's exactly what makes them special.
                </p>
             </div>
          </section>
 
          <section class="features">
             <div class="feature-card">
-               <img src="./assets/features icon/a-minimalist-flat-icon-of-a-cardboard-shipping-box.svg" class="feature-icon" />
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-cardboard-shipping-box.svg"
+                  class="feature-icon"
+               />
                <h3>Free Shipping</h3>
             </div>
             <div class="feature-card">
-               <img src="./assets/features icon/a-minimalist-flat-icon-of-a-pencil-drawing-a-custo.svg" class="feature-icon" />
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-pencil-drawing-a-custo.svg"
+                  class="feature-icon"
+               />
                <h3>Hand Made Craft</h3>
             </div>
             <div class="feature-card">
-               <img src="./assets/features icon/a-minimalist-flat-icon-of-a-crochet-hook-with-a-lo.svg" class="feature-icon" />
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-crochet-hook-with-a-lo.svg"
+                  class="feature-icon"
+               />
                <h3>Customization Designs</h3>
             </div>
             <div class="feature-card">
-               <img src="assets/features icon/a-minimalist-flat-icon-of-a-skein-of-yarn-with-a-s.svg" class="feature-icon" />
+               <img
+                  src="assets/features icon/a-minimalist-flat-icon-of-a-skein-of-yarn-with-a-s.svg"
+                  class="feature-icon"
+               />
                <h3>High Quality Yarn</h3>
             </div>
          </section>
@@ -111,8 +122,8 @@
             <div class="footer-brand">
                <img src="assets/logo.png" alt="Crochet Shop" />
                <p>
-                  Thoughtfully crocheted pieces that bring warmth, character,
-                  and a little more joy to your everyday.
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday.
                </p>
             </div>
             <div class="footer-col">
@@ -150,97 +161,8 @@
       </footer>
 
       <script>
-         const carouselProducts = [
-            {
-               id: "crochet-001",
-               name: "Sunflower Tote Bag",
-               description:
-                  "A handmade crochet tote bag featuring a sunflower pattern, perfect for everyday use or as a stylish accessory.",
-               category: "Bags",
-               price: 450.0,
-               size: "m",
-               total_sold: 12,
-               rating: 4.5,
-               stock_quantity: 8,
-               date_added: "2026-09-01"
-            },
-            {
-               id: "crochet-002",
-               name: "Pastel Baby Blanket",
-               description:
-                  "A soft, cozy baby blanket crocheted in gentle pastel stripes, ideal for keeping little ones warm at nap time.",
-               category: "Blankets",
-               price: 1200.0,
-               size: "l",
-               total_sold: 9,
-               rating: 4.8,
-               stock_quantity: 3,
-               date_added: "2026-08-20"
-            },
-            {
-               id: "crochet-003",
-               name: "Amigurumi Bear Plush",
-               description:
-                  "An adorable handcrafted bear plushie with a tiny red heart, made from premium velvety yarn.",
-               category: "Plushies",
-               price: 650.0,
-               size: "s",
-               total_sold: 21,
-               rating: 4.9,
-               stock_quantity: 15,
-               date_added: "2026-08-05"
-            },
-            {
-               id: "crochet-004",
-               name: "Market Granny Bag",
-               description:
-                  "A roomy granny-square market bag in earthy tones, sturdy enough for your weekly grocery run.",
-               category: "Bags",
-               price: 520.0,
-               size: "m",
-               total_sold: 14,
-               rating: 4.6,
-               stock_quantity: 10,
-               date_added: "2026-09-10"
-            },
-            {
-               id: "crochet-005",
-               name: "Cozy Beanie Hat",
-               description:
-                  "A chunky-knit crochet beanie with a fold-over brim to keep you warm and stylish all winter.",
-               category: "Accessories",
-               price: 380.0,
-               size: "s",
-               total_sold: 30,
-               rating: 4.4,
-               stock_quantity: 25,
-               date_added: "2026-07-15"
-            },
-            {
-               id: "crochet-006",
-               name: "Rose Bouquet Keychain",
-               description:
-                  "A tiny crocheted rose keychain, the perfect little handmade gift for someone you love.",
-               category: "Accessories",
-               price: 150.0,
-               size: "xs",
-               total_sold: 45,
-               rating: 4.7,
-               stock_quantity: 40,
-               date_added: "2026-09-03"
-            }
-         ];
 
-         const cardPalettes = [
-            "linear-gradient(135deg, #f6d9c3, #e2b4b8)",
-            "linear-gradient(135deg, #dce8d6, #b7cdab)",
-            "linear-gradient(135deg, #f4dfe0, #e6bfc4)",
-            "linear-gradient(135deg, #f3ddc3, #ddbd96)",
-            "linear-gradient(135deg, #d9deea, #b6c4d8)",
-            "linear-gradient(135deg, #e6deeb, #c8b6da)"
-         ];
-
-         const formatPrice = (price) => "₱" + price.toFixed(2);
+         const formatPrice = price => '₱' + price.toFixed(2)
 
          const renderCard = (product, paletteIndex) => `
             <div class="product-card">
@@ -259,20 +181,19 @@
                      <span class="product-rating">★ ${product.rating}</span>
                   </div>
                </div>
-            </div>`;
+            </div>`
 
-         const track = document.querySelector(".carousel-track");
+         const track = document.querySelector('.carousel-track')
 
          const renderCardFor = (product, index) =>
-            renderCard(product, index % cardPalettes.length);
+            renderCard(product, index % cardPalettes.length)
 
          const set = carouselProducts
             .map((product, index) => renderCardFor(product, index))
-            .join("");
+            .join('')
 
          track.innerHTML =
-            `<div class="carousel-set">${set}</div>` +
-            `<div class="carousel-set">${set}</div>`;
+            `<div class="carousel-set">${set}</div>` + `<div class="carousel-set">${set}</div>`
       </script>
    </body>
 </html>
