@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cozy Stitch</title>
+      <link rel="icon" type="image/png" href="assets/logo.png" />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar">
+         <div class="logo">
+            <img src="assets/logo.png" alt="logo" />
+         </div>
+
+         <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="crochets.html">Crochets</a>
+            <a href="about.html">About</a>
+         </div>
+
+         <div class="cart">
+            <a href="cart.html" aria-label="Shopping Cart">
+               <img src="assets/cart.png" alt="Shopping Cart" />
+            </a>
+         </div>
+      </nav>
+
+      <!-- Main Content -->
+
+      <main>
+         <section class="hero">
+            <div class="hero-content">
+               <h1>Made by hand. Made to feel like home.</h1>
+               <p>
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday. Discover cozy designs crafted with care, from our hands
+                  to your home.
+               </p>
+               <div class="hero-stats">
+                  <div class="stat">
+                     <h2>3K+</h2>
+                     <span>Happy Customers</span>
+                  </div>
+                  <div class="stat">
+                     <h2>500+</h2>
+                     <span>Crochet Products</span>
+                  </div>
+               </div>
+               <a href="crochets.html" class="shop-btn"> Shop Now </a>
+            </div>
+
+            <div class="hero-visual">
+               <div class="visual-placeholder"></div>
+            </div>
+         </section>
+
+         <section class="product-carousel">
+            <div>
+               <img src="assets/icon_1_heart.png" alt="" />
+               <h4>Best Seller</h4>
+            </div>
+            <div class="carousel-viewport">
+               <div class="carousel-track">
+                  <!-- Best seller cards are injected by the script below -->
+               </div>
+            </div>
+         </section>
+
+         <section class="crochet-section">
+            <div class="crochet-content">
+               <h1>Every Stitch Tells a Story</h1>
+               <div class="crochet-image">
+                  <img src="./assets/crochets/melody.png" alt="" />
+                  <img src="./assets/crochets/tulips.png" alt="" />
+                  <img src="./assets/crochets/pompumpurin.png" alt="" />
+               </div>
+               <p>
+                  From playful plushies to cozy keepsakes, every piece is crocheted by hand
+                  from premium yarn — one mindful stitch at a time. No two are ever exactly
+                  alike, and that's exactly what makes them special.
+               </p>
+            </div>
+         </section>
+
+         <section class="features">
+            <div class="feature-card">
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-cardboard-shipping-box.svg"
+                  class="feature-icon"
+               />
+               <h3>Free Shipping</h3>
+            </div>
+            <div class="feature-card">
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-pencil-drawing-a-custo.svg"
+                  class="feature-icon"
+               />
+               <h3>Hand Made Craft</h3>
+            </div>
+            <div class="feature-card">
+               <img
+                  src="./assets/features icon/a-minimalist-flat-icon-of-a-crochet-hook-with-a-lo.svg"
+                  class="feature-icon"
+               />
+               <h3>Customization Designs</h3>
+            </div>
+            <div class="feature-card">
+               <img
+                  src="assets/features icon/a-minimalist-flat-icon-of-a-skein-of-yarn-with-a-s.svg"
+                  class="feature-icon"
+               />
+               <h3>High Quality Yarn</h3>
+            </div>
+         </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="footer-container">
+            <div class="footer-brand">
+               <img src="assets/logo.png" alt="Crochet Shop" />
+               <p>
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday.
+               </p>
+            </div>
+            <div class="footer-col">
+               <h4>Shop</h4>
+               <ul>
+                  <li><a href="#">Crochets</a></li>
+                  <li><a href="#">Tote Bags</a></li>
+                  <li><a href="#">Plushies</a></li>
+                  <li><a href="#">Blankets</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Company</h4>
+               <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Custom Orders</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Support</h4>
+               <ul>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>&copy; 2026 Cozy Stitch. Made by hand, made to feel like home.</p>
+         </div>
+      </footer>
+
+      <script>
+
+         const formatPrice = price => '₱' + price.toFixed(2)
+
+         const renderCard = (product, paletteIndex) => `
+            <div class="product-card">
+               <div
+                  class="product-image"
+                  style="background-image: ${cardPalettes[paletteIndex]};"
+               ></div>
+               <div class="product-info">
+                  <p class="product-category">
+                     ${product.category} · Size ${product.size.toUpperCase()}
+                  </p>
+                  <h3>${product.name}</h3>
+                  <p class="product-description">${product.description}</p>
+                  <div class="product-bottom">
+                     <p class="product-price">${formatPrice(product.price)}</p>
+                     <span class="product-rating">★ ${product.rating}</span>
+                  </div>
+               </div>
+            </div>`
+
+         const track = document.querySelector('.carousel-track')
+
+         const renderCardFor = (product, index) =>
+            renderCard(product, index % cardPalettes.length)
+
+         const set = carouselProducts
+            .map((product, index) => renderCardFor(product, index))
+            .join('')
+
+         track.innerHTML =
+            `<div class="carousel-set">${set}</div>` + `<div class="carousel-set">${set}</div>`
+      </script>
+   </body>
+</html>
