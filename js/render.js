@@ -1,6 +1,6 @@
 function parseProduct(product) {
    const div = document.createElement('div')
-   div.style.backgroundImage = `url('../assets/crochets/${product.name}')`
+   div.style.backgroundImage = `url('../assets/crochets/${product.image}')`
    div.className = 'product-card'
    div.setAttribute('role', 'button')
    div.tabIndex = 0
