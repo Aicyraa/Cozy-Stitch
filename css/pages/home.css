@@ -134,6 +134,66 @@ main {
    background: var(--gradient-fade);
 }
 
+.carousel-viewport {
+   overflow: hidden;
+   -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.carousel-track {
+   display: flex;
+   width: max-content;
+   gap: 1.375rem;
+   padding: 0.625rem 0;
+   animation: carousel-scroll 40s linear infinite;
+}
+
+.product-carousel:hover .carousel-track {
+   animation-play-state: paused;
+}
+
+.carousel-set {
+   display: flex;
+   gap: 1.375rem;
+   padding-right: 1.375rem;
+}
+
+@keyframes carousel-scroll {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+.product-card {
+   position: relative;
+   width: 16.875rem;
+   height: 21.875rem;
+   border-radius: var(--radius-md);
+   overflow: hidden;
+   flex: 0 0 auto;
+   background-color: var(--surface);
+   box-shadow: var(--shadow-card);
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .carousel-track {
+      animation: none;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set {
+      width: 100%;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set:nth-child(2) {
+      display: none;
+   }
+}
+
 /* crochet scroll 2 */
 
 .crochet-section {

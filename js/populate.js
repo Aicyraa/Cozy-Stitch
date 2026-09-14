@@ -370,5 +370,5 @@ export default function seed() {
    ]
 
    const instances = data.map(val => new Crochet(...val, productImages[val[0]]))
-   storageSave(instances)
+   storageSave('crochets', instances)
 }
