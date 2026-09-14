@@ -106,39 +106,5 @@
          </div>
       </footer>
 
-      <script>
-         const formatPrice = price => '₱' + price.toFixed(2)
-
-         const renderCard = (product, paletteIndex) => `
-            <div class="product-card">
-               <div
-                  class="product-image"
-                  style="background-image: ${cardPalettes[paletteIndex]};"
-               ></div>
-               <div class="product-info">
-                  <p class="product-category">
-                     ${product.category} · Size ${product.size.toUpperCase()}
-                  </p>
-                  <h3>${product.name}</h3>
-                  <p class="product-description">${product.description}</p>
-                  <div class="product-bottom">
-                     <p class="product-price">${formatPrice(product.price)}</p>
-                     <span class="product-rating">★ ${product.rating}</span>
-                  </div>
-               </div>
-            </div>`
-
-         const track = document.querySelector('.carousel-track')
-
-         const renderCardFor = (product, index) =>
-            renderCard(product, index % cardPalettes.length)
-
-         const set = carouselProducts
-            .map((product, index) => renderCardFor(product, index))
-            .join('')
-
-         track.innerHTML =
-            `<div class="carousel-set">${set}</div>` + `<div class="carousel-set">${set}</div>`
-      </script>
-   </body>
+      </body>
 </html>

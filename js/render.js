@@ -1,5 +1,9 @@
 /* ===================== Product Cards ===================== */
 
+function formatPrice(value) {
+   return `&#8369;${Number(value).toFixed(2)}`
+}
+
 function parseProduct(product) {
    return `
       <div class="product-card" role="button" tabindex="0" data-id="${product.id}"
@@ -9,7 +13,7 @@ function parseProduct(product) {
             <p class="card-category"> ${product.category}</p>
             <h3 class="card-name">${product.name}</h3>
             <div class="card-bottom">
-               <p class="card-price">&#8369;${product.price}</p>
+               <p class="card-price">${formatPrice(product.price)}</p>
             </div>
          </div>
       </div>
@@ -25,7 +29,7 @@ function renderModalContent(product, els) {
    els.rating.innerHTML = `★ <span class="rating-value">${product.rating}</span>`
    els.size.textContent = product.size
    els.description.textContent = product.description
-   els.price.innerHTML = `&#8369;${Number(product.price).toFixed(2)}`
+   els.price.innerHTML = formatPrice(product.price)
 }
 
-export { parseProduct, renderModalContent }
+export { parseProduct, renderModalContent, formatPrice }

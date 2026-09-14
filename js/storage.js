@@ -23,12 +23,12 @@ function cartAdd(product, quantity) {
 
    if (existing) {
       existing.quantity = Math.min(existing.quantity + quantity, product.stock)
-      existing.total = existing.price * existing.quantity
+      existing.total = Number(existing.product.price) * existing.quantity
    } else {
       cart.push({
-         ...product,
+         id: product.id,
+         product: { ...product },
          quantity,
-         price: Number(product.price),
          total: Number(product.price) * quantity,
       })
    }
