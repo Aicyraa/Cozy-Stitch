@@ -1,0 +1,81 @@
+/*About*/
+
+.about-hero h1 {
+   text-align: center;
+   margin-top: 2.5rem;
+   color: var(--primary);
+}
+
+.about-visual-placeholder {
+   width: auto;
+   height: 30rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2rem;
+
+   background-color: var(--surface);
+}
+
+.about-hero-content {
+    width: 100%;
+    padding: 5rem 6%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 850px;
+    padding: 3.5rem 4rem;
+
+    text-align: center;
+
+    background-color: var(--white);
+    border: 0.0625rem solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-feature);
+}
+
+/* Small label above the heading */
+.about-label {
+    display: block;
+    margin-bottom: 1rem;
+
+    font-family: var(--font-description);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+
+    color: var(--accent);
+}
+
+/* Main heading */
+.about-text h1 {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    color: var(--primary-deep);
+}
+
+/* Paragraphs */
+.about-text p {
+    max-width: 700px;
+    margin: 0 auto 1.3rem;
+
+    font-family: var(--font-description);
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    color: var(--primary-deep);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cozy Stitch</title>
+      <link rel="icon" type="image/png" href="assets/logo.png" />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar">
+         <div class="logo">
+            <img src="assets/logo.png" alt="logo" />
+         </div>
+
+         <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="crochets.html">Crochets</a>
+            <a href="about.html">About</a>
+         </div>
+
+         <div class="cart">
+            <a href="cart.html" aria-label="Shopping Cart">
+               <img src="assets/cart.png" alt="Shopping Cart" />
+            </a>
+         </div>
+      </nav>
+
+      <!-- Main Content -->
+
+      <main>
+         <section class="about-hero">
+            <h1>Where Every Stitch Tells a Story</h1>
+          <!--img-->
+            <div class="about-visual-placeholder"></div>
+        </section>
+
+         <section class="about-hero-content">
+            <div class="about-text">
+               <span class="about-label">OUR STORY</span>
+
+               <h1>Made with Love, Stitched with Care</h1>
+
+               <p>
+                     Cozy Stitch is a small, family-owned business that specializes in
+                     creating handcrafted crochet items. Our passion for crochet and
+                     dedication to quality craftsmanship is evident in every piece we create.
+               </p>
+
+               <p>
+                     From cozy blankets to adorable plushies, each item is made with love
+                     and attention to detail. We believe handmade pieces have a special charm
+                     and character that cannot be replicated by mass-produced goods.
+               </p>
+
+               <p>
+                     That's why we take pride in our work and strive to create unique pieces
+                     that bring warmth and joy to our customers' lives.
+               </p>
+            </div>
+         </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="footer-container">
+            <div class="footer-brand">
+               <img src="assets/logo.png" alt="Crochet Shop" />
+               <p>
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday.
+               </p>
+            </div>
+            <div class="footer-col">
+               <h4>Shop</h4>
+               <ul>
+                  <li><a href="#">Crochets</a></li>
+                  <li><a href="#">Tote Bags</a></li>
+                  <li><a href="#">Plushies</a></li>
+                  <li><a href="#">Blankets</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Company</h4>
+               <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Custom Orders</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Support</h4>
+               <ul>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>&copy; 2026 Cozy Stitch. Cozy Creations Made Just for You</p>
+         </div>
+      </footer>
+
+      <script>
+
+         const formatPrice = price => '₱' + price.toFixed(2)
+
+         const renderCard = (product, paletteIndex) => `
+            <div class="product-card">
+               <div
+                  class="product-image"
+                  style="background-image: ${cardPalettes[paletteIndex]};"
+               ></div>
+               <div class="product-info">
+                  <p class="product-category">
+                     ${product.category} · Size ${product.size.toUpperCase()}
+                  </p>
+                  <h3>${product.name}</h3>
+                  <p class="product-description">${product.description}</p>
+                  <div class="product-bottom">
+                     <p class="product-price">${formatPrice(product.price)}</p>
+                     <span class="product-rating">★ ${product.rating}</span>
+                  </div>
+               </div>
+            </div>`
+
+         const track = document.querySelector('.carousel-track')
+
+         const renderCardFor = (product, index) =>
+            renderCard(product, index % cardPalettes.length)
+
+         const set = carouselProducts
+            .map((product, index) => renderCardFor(product, index))
+            .join('')
+
+         track.innerHTML =
+            `<div class="carousel-set">${set}</div>` + `<div class="carousel-set">${set}</div>`
+      </script>
+   </body>
+</html>
