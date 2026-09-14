@@ -30,12 +30,7 @@
     max-width: 850px;
     padding: 3.5rem 4rem;
 
-    text-align: center;
-
-    background-color: var(--white);
-    border: 0.0625rem solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-feature);
+    text-align: center
 }
 
 /* Small label above the heading */
