@@ -6,7 +6,7 @@ main {
 
 .hero {
    display: flex;
-   padding: var(--space-9) 7rem;
+   padding: var(--space-7) 6rem;
    gap: var(--space-8);
 }
 
@@ -15,14 +15,14 @@ main {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   margin-top: 1.5rem;
 }
 
 .hero-content h1 {
-   font-size: var(--fs-3xl);
+   font-size: 3.00rem;
    font-weight: bold;
-   line-height: 1.2;
+   line-height: 1.33;
    color: var(--primary);
-   margin-bottom: var(--space-4);
 }
 
 .hero-content p {
@@ -30,7 +30,7 @@ main {
    line-height: 1.7;
    font-family: var(--font-description);
    color: var(--primary-deep);
-   margin-bottom: 0.9375rem;
+   margin-top: 1rem;
 }
 
 /* button */
@@ -63,8 +63,8 @@ main {
 }
 
 .visual-placeholder {
-   width: 25rem;
-   height: 25rem;
+   width: 40rem;
+   height: 32rem;
 
    display: flex;
    justify-content: center;
@@ -84,7 +84,7 @@ main {
    gap: 6.25rem;
 
    width: 100%;
-   margin-top: 0.9375rem;
+   margin-top: 3rem;
    margin-bottom: 0.3125rem;
 }
 
@@ -282,9 +282,14 @@ main {
    font-weight: bold;
    color: var(--primary);
    margin-bottom: 2.8125rem;
+
+   padding: var(--space-4) var(--space-8);
+   border-radius: var(--radius-lg);
+   box-shadow: var(--shadow-img);
+
 }
 
-/* ==============================
+/* ====================111==========
    IMAGE
 ================================= */
 
@@ -314,7 +319,7 @@ main {
 
 /* middle image in front */
 .crochet-image > img:nth-child(2) {
-   transform: translate(-50%, -50%) translateZ(5.625rem);
+   transform: translate(-50%, -50%) translateX(1%) translateY(-7%) translateZ(5.625rem) rotate(45deg);
    box-shadow: 0 0 0 white;
    z-index: 3;
 }
@@ -345,15 +350,22 @@ main {
 /* ==============================
    FEATURES SECTION
 ================================= */
-
 .features {
    max-width: 75rem;
-   margin: 0 auto;
+   margin: -2.5rem auto auto auto;
    padding: var(--space-10) 6%;
+}
 
+.feature-content {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 1.5625rem;
+}
+
+.features > h1{
+   text-align: left;
+   margin-bottom: 3.5rem;
+   color: var(--primary);
 }
 
 /* ==============================
@@ -369,7 +381,7 @@ main {
 
    text-align: center;
 
-   padding: var(--space-4);
+   padding: var(--space-9) var(--space-8);
 
    background-color: var(--white);
 
@@ -415,3 +427,4 @@ main {
    line-height: 1.4;
    color: var(--primary);
 }
+
