@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cozy Stitch | Crochets</title>
+      <link rel="icon" type="image/png" href="../assets/logo.png" />
+      <link rel="stylesheet" href="../style.css" />
+   </head>
+   <body>
+      <!-- Product Modal -->
+      <div class="modal-overlay" id="productModal">
+         <div class="modal">
+            <button type="button" class="modal-close" id="modalClose" aria-label="Close">
+               &times;
+            </button>
+
+            <div class="modal-image"></div>
+
+            <div class="modal-details">
+               <p class="modal-category"></p>
+               <h2 class="modal-name"></h2>
+
+               <div class="modal-meta">
+                  <span class="modal-rating"></span>
+                  <span class="modal-size"></span>
+                  <span class="modal-sold"></span>
+               </div>
+
+               <p class="modal-description"></p>
+
+               <div class="modal-price-row">
+                  <div>
+                     <p class="modal-price"></p>
+                     <p class="modal-stock"></p>
+                  </div>
+                  <div class="quantity-control">
+                     <button type="button" class="qty-decrease" aria-label="Decrease quantity">
+                        &minus;
+                     </button>
+                     <span class="quantity-value">1</span>
+                     <button type="button" class="qty-increase" aria-label="Increase quantity">
+                        +
+                     </button>
+                  </div>
+               </div>
+
+               <button type="button" class="add-to-cart-btn">Add to Cart</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+         <div class="logo">
+            <img src="../assets/logo.png" alt="logo" />
+         </div>
+         <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="crochet.html" class="active">Crochets</a>
+            <a href="about.html">About</a>
+         </div>
+         <div class="cart">
+            <button type="button" aria-label="Shopping Cart">
+               <img src="../assets/cart.png" alt="Shopping Cart" />
+            </button>
+         </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="crochet-page">
+         <div class="crochet-main">
+            <!-- Sidebar: settings that control which cards are shown -->
+            <aside class="filter-sidebar">
+               <div class="filter-header">
+                  <h2>Filter</h2>
+                  <button type="button" id="resetFilters" class="reset-filters-btn">
+                     Reset
+                  </button>
+               </div>
+
+               <div class="filter-groups">
+                  <fieldset class="filter-group">
+                     <legend>Sort by</legend>
+                     <label class="filter-option">
+                        <input type="radio" name="sort" value="price-asc" />
+                        Price: Low to High
+                     </label>
+                     <label class="filter-option">
+                        <input type="radio" name="sort" value="price-desc" />
+                        Price: High to Low
+                     </label>
+                     <label class="filter-option">
+                        <input type="radio" name="sort" value="top-sellers" />
+                        Top Sellers
+                     </label>
+                     <label class="filter-option">
+                        <input type="radio" name="sort" value="newest" checked />
+                        Newest
+                     </label>
+                  </fieldset>
+
+                  <fieldset class="filter-group">
+                     <legend>Category</legend>
+                     <label class="filter-option">
+                        <input type="checkbox" value="bags" />
+                        Bags
+                     </label>
+                     <label class="filter-option">
+                        <input type="checkbox" value="anime" />
+                        Anime Characters
+                     </label>
+                     <label class="filter-option">
+                        <input type="checkbox" value="accessories key chain" />
+                        Accessories &amp; Keychains
+                     </label>
+                     <label class="filter-option">
+                        <input type="checkbox" value="wallets" />
+                        Wallets
+                     </label>
+                     <label class="filter-option">
+                        <input type="checkbox" value="animals" />
+                        Animals
+                     </label>
+                  </fieldset>
+
+                  <fieldset class="filter-group">
+                     <legend>Sizes</legend>
+                     <div class="size-options">
+                        <button type="button" class="size-btn" data-size="mini">XS</button>
+                        <button type="button" class="size-btn" data-size="small">S</button>
+                        <button type="button" class="size-btn" data-size="medium">M</button>
+                        <button type="button" class="size-btn" data-size="large">L</button>
+                     </div>
+                  </fieldset>
+               </div>
+            </aside>
+
+<!-- Product listing -->
+         <section class="products-panel">
+               <div class="panel-header">
+                  <div>
+                     <h1 class="panel-title">Our Crochets</h1>
+                     <p class="panel-subtitle">
+                        Handmade pieces, one mindful stitch at a time.
+                     </p>
+                  </div>
+                  <div class="search-bar-wrap">
+                     <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search crochet pieces..."
+                        aria-label="Search crochet pieces"
+                     />
+                  </div>
+               </div>
+
+               <div class="product-grid" id="productGrid">
+                  <!-- Cards are rendered here by js/pages/crochet.js from localStorage -->
+               </div>
+            </section>
+         </div>
+
+         <nav class="pagination" id="pagination" aria-label="Products pagination"></nav>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="footer-container">
+            <div class="footer-brand">
+               <img src="../assets/logo.png" alt="Crochet Shop" />
+               <p>
+                  Thoughtfully crocheted pieces that bring warmth, character, and a little more
+                  joy to your everyday.
+               </p>
+            </div>
+            <div class="footer-col">
+               <h4>Shop</h4>
+               <ul>
+                  <li><a href="#">Crochets</a></li>
+                  <li><a href="#">Tote Bags</a></li>
+                  <li><a href="#">Plushies</a></li>
+                  <li><a href="#">Blankets</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Company</h4>
+               <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Custom Orders</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Support</h4>
+               <ul>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <p>&copy; 2026 Cozy Stitch. Made by hand, made to feel like home.</p>
+         </div>
+      </footer>
+   </body>
+   <script type="module" src="../js/pages/crochet.js"></script>
+</html>

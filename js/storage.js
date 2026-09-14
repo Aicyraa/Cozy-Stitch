@@ -1,11 +1,11 @@
-function storage_save(data) {
+function storageSave(data) {
    localStorage.setItem('crochets', JSON.stringify(data))
    return
 }
 
-function storage_retrive(key) {
-   const raw = localStorage.getItem(str)
-   return JSON.parse(raw)
+function storageRetrieve(key) {
+   const raw = localStorage.getItem(key)
+   return raw ? JSON.parse(raw) : null
 }
 
-export { storage_save, storage_retrive }
+export { storageSave, storageRetrieve }
