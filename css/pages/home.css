@@ -202,21 +202,17 @@ main {
 
 .crochet-content {
    max-width: 56.25rem;
-   margin: 0 auto;
+   margin: 4.375rem auto;
    text-align: center;
 }
 
-.crochet-content h1 {
-   font-size: var(--fs-2xl);
-   line-height: 1.2;
-   font-weight: bold;
-   color: var(--primary);
-   margin-bottom: 2.8125rem;
-
-   padding: var(--space-4) var(--space-8);
-   border-radius: var(--radius-lg);
-   box-shadow: var(--shadow-img);
-
+.crochet-content p {
+   max-width: 40.625rem;
+   margin: 2.1875rem auto 3.125rem;
+   font-size: 1.0625rem;
+   line-height: 1.8;
+   font-family: var(--font-description);
+   color: var(--primary-deep);
 }
 
 /* ====================111==========
@@ -266,95 +262,5 @@ main {
    transform: translate(-50%, -50%) translateX(70%) translateZ(-5.625rem) rotateY(-26deg)
       scale(0.9);
    z-index: 1;
-}
-
-.crochet-content p {
-   max-width: 40.625rem;
-   margin: 2.1875rem auto 0;
-   font-size: 1.0625rem;
-   line-height: 1.8;
-   font-family: var(--font-description);
-   color: var(--primary-deep);
-}
-
-/* ==============================
-   FEATURES SECTION
-================================= */
-.features {
-   max-width: 75rem;
-   margin: -2.5rem auto auto auto;
-   padding: var(--space-10) 6%;
-}
-
-.feature-content {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 1.5625rem;
-}
-
-.features > h1{
-   text-align: left;
-   margin-bottom: 3.5rem;
-   color: var(--primary);
-}
-
-/* ==============================
-   FEATURE CARD
-================================= */
-
-.feature-card {
-   min-height: 9.375rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-
-   text-align: center;
-
-   padding: var(--space-9) var(--space-8);
-
-   background-color: var(--white);
-
-   border: 0.0625rem solid var(--border);
-   border-radius: var(--radius-lg);
-
-   box-shadow: var(--shadow-feature);
-
-   transition:
-      transform var(--transition-base),
-      box-shadow var(--transition-base),
-      border-color var(--transition-base);
-}
-
-.feature-card:hover {
-   transform: translateY(-0.5rem);
-
-   box-shadow: var(--shadow-feature-hover);
-
-   border-color: var(--accent);
-}
-
-.feature-icon {
-   height: 6.25rem;
-   width: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: var(--space-1);
-   border-radius: 50%;
-   transition:
-      transform var(--transition-base),
-      background-color var(--transition-base);
-}
-
-.feature-card:hover .feature-icon {
-   transform: scale(1.08);
-}
-
-.feature-card h3 {
-   font-size: var(--fs-md);
-   font-weight: 600;
-   line-height: 1.4;
-   color: var(--primary);
 }
 
