@@ -8,6 +8,28 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
+      <!-- Cart Drawer -->
+      <div class="cart-overlay" id="cartOverlay">
+         <div class="cart-drawer">
+            <div class="cart-drawer-header">
+               <h2 class="cart-drawer-title">Your Cart</h2>
+               <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                     <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+                  </svg>
+               </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+               <div class="cart-total-row">
+                  <span>Total</span>
+                  <p class="cart-total"></p>
+               </div>
+               <button type="button" class="cart-checkout-btn">Checkout</button>
+            </div>
+         </div>
+      </div>
+
       <!-- Navbar -->
       <nav class="navbar">
          <div class="logo">
@@ -21,6 +43,7 @@
          <div class="cart">
             <button type="button" aria-label="Shopping Cart">
                <img src="assets/cart.png" alt="Shopping Cart" />
+               <span class="cart-badge" hidden>0</span>
             </button>
          </div>
       </nav>
@@ -165,5 +188,6 @@
       </footer>
 
       <script type="module" src="js/pages/home.js"></script>
+      <script type="module" src="js/cart.js"></script>
    </body>
 </html>

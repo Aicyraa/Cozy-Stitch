@@ -13,8 +13,21 @@ function storageRetrieve(key) {
 
 /* ===================== Cart ===================== */
 
+function normalizeCart(cart) {
+   return cart.map(item => {
+      if (item.product) return item
+      const { quantity, total, ...product } = item
+      return {
+         id: item.id,
+         product: { ...product },
+         quantity,
+         total,
+      }
+   })
+}
+
 function storageRetrieveCart() {
-   return storageRetrieve(CART_KEY) || []
+   return normalizeCart(storageRetrieve(CART_KEY) || [])
 }
 
 function cartAdd(product, quantity) {
@@ -37,4 +50,26 @@ function cartAdd(product, quantity) {
    return cart
 }
 
-export { storageSave, storageRetrieve, cartAdd }
+function cartRemove(id) {
+   const cart = storageRetrieveCart().filter(item => item.id !== id)
+   storageSave(CART_KEY, cart)
+   return cart
+}
+
+function cartUpdateQuantity(id, delta) {
+   const cart = storageRetrieveCart()
+   const item = cart.find(item => item.id === id)
+   if (!item) return cart
+
+   item.quantity = Math.min(Math.max(item.quantity + delta, 1), item.product.stock)
+   item.total = Number(item.product.price) * item.quantity
+
+   storageSave(CART_KEY, cart)
+   return cart
+}
+
+function cartTotal(cart) {
+   return cart.reduce((sum, item) => sum + Number(item.total), 0)
+}
+
+export { storageSave, storageRetrieve, storageRetrieveCart, cartAdd, cartRemove, cartUpdateQuantity, cartTotal }
