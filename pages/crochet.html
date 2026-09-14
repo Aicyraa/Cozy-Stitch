@@ -18,34 +18,34 @@
             <div class="modal-image"></div>
 
             <div class="modal-details">
-               <p class="modal-category"></p>
+               <div class="modal-topline">
+                  <p class="modal-category"></p>
+                  <span class="modal-rating"></span>
+               </div>
                <h2 class="modal-name"></h2>
 
-               <div class="modal-meta">
-                  <span class="modal-rating"></span>
-                  <span class="modal-size"></span>
-                  <span class="modal-sold"></span>
-               </div>
+               <p class="modal-size-line">Size · <span class="modal-size"></span></p>
 
                <p class="modal-description"></p>
 
-               <div class="modal-price-row">
-                  <div>
+               <div class="modal-buy">
+                  <div class="modal-price-row">
                      <p class="modal-price"></p>
-                     <p class="modal-stock"></p>
+                     <div class="modal-buy-controls">
+                        <div class="quantity-control">
+                           <button type="button" class="qty-decrease" aria-label="Decrease quantity">
+                              &minus;
+                           </button>
+                           <span class="quantity-value">1</span>
+                           <button type="button" class="qty-increase" aria-label="Increase quantity">
+                              +
+                           </button>
+                        </div>
+                     </div>
                   </div>
-                  <div class="quantity-control">
-                     <button type="button" class="qty-decrease" aria-label="Decrease quantity">
-                        &minus;
-                     </button>
-                     <span class="quantity-value">1</span>
-                     <button type="button" class="qty-increase" aria-label="Increase quantity">
-                        +
-                     </button>
-                  </div>
-               </div>
 
-               <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                  <button type="button" class="add-to-cart-btn">Add to Cart</button>
+               </div>
             </div>
          </div>
       </div>
