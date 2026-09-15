@@ -105,6 +105,7 @@ main {
 
 .product-carousel {
    padding: var(--space-1) 0 4.0625rem;
+   margin-bottom: -2.0625rem;
 }
 
 .product-carousel > div:first-child {
@@ -214,6 +215,7 @@ main {
    width: min(50rem, 100%);
    height: 25rem;
    margin: 0 auto;
+   margin-bottom: 3.125rem;
    display: flex;
    align-items: center;
    justify-content: center;
