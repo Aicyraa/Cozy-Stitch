@@ -39,7 +39,7 @@ function parseCartItem(item) {
    return `
       <div class="cart-item" data-id="${id}">
          <div class="cart-item-image"
-            style="background-image:url('../assets/crochets/${product.image}')">
+            style="background-image:url('../assets/crochets/"kuromi"')">
          </div>
          <div class="cart-item-info">
             <div class="cart-item-top">
