@@ -62,16 +62,11 @@ main {
    align-items: center;
 }
 
-.visual-placeholder {
+.hero-visual img{
    width: 40rem;
    height: 32rem;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-   background-color: var(--surface);
-   border-radius: 3.125rem;
+   border-radius: 20px;
+   object-fit: cover;
 }
 
 /* hero-stats */
@@ -197,18 +192,13 @@ main {
 /* crochet scroll 2 */
 
 .crochet-section {
-   padding: 1.25rem 3.75rem;
-}
-
-.crochet-content {
-   max-width: 56.25rem;
-   margin: 4.375rem auto;
+   padding: 0 2rem;
    text-align: center;
 }
 
 .crochet-content p {
    max-width: 40.625rem;
-   margin: 2.1875rem auto 3.125rem;
+   margin: 1.5rem auto 3.125rem;
    font-size: 1.0625rem;
    line-height: 1.8;
    font-family: var(--font-description);
