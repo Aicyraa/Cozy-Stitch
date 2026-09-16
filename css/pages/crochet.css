@@ -1,7 +1,6 @@
-/* ===================== Crochets Page Layout =====================
+/* ===== Crochets Page ===== */
 
-   Desktop: sticky filter rail on the left, product grid on the right.
-   The grid locks to 4 columns on wide screens before it wraps. */
+/* Page Layout */
 
 .crochet-page {
    max-width: 90rem;
@@ -16,7 +15,7 @@
    gap: var(--space-7);
 }
 
-/* ===================== Filter Sidebar ===================== */
+/* Filter Sidebar */
 
 .filter-sidebar {
    flex: 0 0 16rem;
@@ -28,6 +27,8 @@
    top: var(--space-6);
    box-shadow: 0 0.5rem 1.5rem rgba(107, 79, 69, 0.06);
 }
+
+/* Filter Header */
 
 .filter-header {
    display: flex;
@@ -68,7 +69,7 @@
    outline-offset: 0.125rem;
 }
 
-/* Filter groups: stacked in the rail, tiled when the rail goes full-width */
+/* Filter Groups */
 
 .filter-groups {
    display: grid;
@@ -116,7 +117,7 @@
    background-color: rgba(232, 180, 184, 0.28);
 }
 
-/* ----- Custom radio buttons ----- */
+/* Custom Radio Buttons */
 
 .filter-option input[type='radio'] {
    appearance: none;
@@ -150,7 +151,7 @@
    transform: scale(1);
 }
 
-/* ----- Custom checkboxes ----- */
+/* Custom Checkboxes */
 
 .filter-option input[type='checkbox'] {
    appearance: none;
@@ -195,7 +196,7 @@
    outline-offset: 0.125rem;
 }
 
-/* ===================== Size Chips ===================== */
+/* Size Chips */
 
 .size-options {
    display: flex;
@@ -238,7 +239,7 @@
    outline-offset: 0.125rem;
 }
 
-/* ===================== Products Panel ===================== */
+/* Products Panel */
 
 .products-panel {
    position: absolute;
@@ -274,6 +275,8 @@
    font-size: var(--fs-base);
    color: var(--primary-deep);
 }
+
+/* Search Bar */
 
 .search-bar-wrap {
    position: relative;
@@ -317,10 +320,7 @@
    box-shadow: 0 0 0 0.25rem rgba(232, 180, 184, 0.3);
 }
 
-/* ===================== Product Card =====================
-   The "image" is the whole card background; a gradient overlay keeps the
-   text readable no matter what's behind it, from solid at the bottom
-   to fully transparent near the top. */
+/* Product Grid */
 
 .product-grid {
    display: grid;
@@ -339,105 +339,14 @@
    color: var(--primary-deep);
 }
 
-.product-card {
-   position: relative;
-   aspect-ratio: 4 / 5;
-   border-radius: var(--radius-md);
-   overflow: hidden;
-   background-color: var(--surface);
-   background-size: cover;
-   background-position: center;
-   box-shadow: var(--shadow-card);
-   cursor: pointer;
-   transition:
-      transform var(--transition-base),
-      box-shadow var(--transition-base);
-}
-
-.product-card:hover,
-.product-card:focus-visible {
-   transform: translateY(-0.25rem);
-   box-shadow: var(--shadow-feature-hover);
-}
-
-/* Neutralize the home-page carousel sizing (home.css) so grid cards
-   fill their track instead of overlapping out of it. */
+/* Neutralize the carousel card sizing from home.css so grid cards fill their track. */
 
 .product-grid .product-card {
    width: 100%;
    height: 100%;
 }
 
-.product-card::after {
-   content: '';
-   position: absolute;
-   inset: 0;
-   background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.25) 18%,
-      rgba(0, 0, 0, 0) 35%
-   );
-}
-
-.card-info {
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: 1;
-   padding: var(--space-2) var(--space-3) var(--space-3);
-   color: var(--white);
-}
-
-.card-size {
-   position: absolute;
-   top: var(--space-2);
-   right: var(--space-2);
-   z-index: 1;
-   padding: 0.25rem 0.6rem;
-   border: 0.0625rem solid rgba(255, 255, 255, 0.35);
-   border-radius: var(--radius-full);
-   background-color: rgba(0, 0, 0, 0.45);
-   backdrop-filter: blur(0.25rem);
-   -webkit-backdrop-filter: blur(0.25rem);
-   font-family: var(--font-body);
-   font-size: var(--fs-xs);
-   font-weight: 700;
-   line-height: 1;
-   color: var(--accent);
-}
-
-.card-category {
-   font-family: var(--font-body);
-   font-size: 0.75rem;
-   font-weight: 600;
-   letter-spacing: 0.02rem;
-   opacity: 0.85;
-}
-
-.card-name {
-   font-family: var(--font-heading);
-   font-size: 1.125rem;
-   line-height: 1.2;
-   margin: 0.2rem 0 0.35rem;
-}
-
-.card-bottom {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   font-family: var(--font-body);
-   font-size: var(--fs-sm);
-}
-
-.card-price {
-   font-family: var(--font-body);
-   font-size: 1rem;
-   font-weight: 800;
-}
-
-/* ===================== Pagination ===================== */
+/* Pagination */
 
 .pagination {
    display: flex;
@@ -490,7 +399,7 @@
    cursor: not-allowed;
 }
 
-/* ===================== Product Modal ===================== */
+/* Product Modal */
 
 .modal-overlay {
    position: fixed;
@@ -767,7 +676,7 @@
    outline-offset: 0.125rem;
 }
 
-/* ===================== Responsive ===================== */
+/* Responsive */
 
 @media (max-width: 62rem) {
    .crochet-main {
@@ -837,6 +746,8 @@
       min-height: 12rem;
    }
 }
+
+/* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
    .product-card,

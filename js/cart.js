@@ -5,6 +5,7 @@ import {
    cartRemove,
    cartUpdateQuantity,
    cartTotal,
+   cartClear,
 } from './storage.js'
 import { parseCartItem, formatPrice } from './render.js'
 import { createModal } from './helper.js'
@@ -76,6 +77,12 @@ function handleCartItemClick(event) {
 }
 
 /* ===================== Init ===================== */
+
+checkoutBtn.addEventListener('click', () => {
+   cartClear()
+   renderCart()
+   drawer.close()
+})
 
 cartButton.addEventListener('click', openCart)
 itemsEl.addEventListener('click', handleCartItemClick)

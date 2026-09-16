@@ -4,13 +4,20 @@ function formatPrice(value) {
    return `₱${Number(value).toFixed(2)}`
 }
 
+function slugify(name) {
+   return name.toLowerCase().split(/\s+/).join('_')
+}
+
+function productImage(product) {
+   return `../assets/products/${slugify(product.name)}-removebg-preview.png`
+}
+
 function parseProduct(product) {
    return `
       <div class="product-card" role="button" tabindex="0" data-id="${product.id}"
-         style="background-image:url('../assets/crochets/${product.image}')">
+         style="background-image:url('${productImage(product)}')">
          <span class="card-size"> ${product.size} </span>
          <div class="card-info">
-            <p class="card-category"> ${product.category}</p>
             <h3 class="card-name">${product.name}</h3>
             <div class="card-bottom">
                <p class="card-price">${formatPrice(product.price)}</p>
@@ -23,7 +30,7 @@ function parseProduct(product) {
 /* ===================== Modal Content ===================== */
 
 function renderModalContent(product, els) {
-   els.image.style.backgroundImage = `url('../assets/crochets/${product.image}')`
+   els.image.style.backgroundImage = `url('${productImage(product)}')`
    els.category.textContent = product.category
    els.name.textContent = product.name
    els.rating.innerHTML = `★ <span class="rating-value">${product.rating}</span>`
@@ -39,7 +46,7 @@ function parseCartItem(item) {
    return `
       <div class="cart-item" data-id="${id}">
          <div class="cart-item-image"
-            style="background-image:url('../assets/crochets/"kuromi"')">
+            style="background-image:url('${productImage(product)}')">
          </div>
          <div class="cart-item-info">
             <div class="cart-item-top">
@@ -68,4 +75,4 @@ function parseCartItem(item) {
    `
 }
 
-export { parseProduct, renderModalContent, formatPrice, parseCartItem }
+export { parseProduct, renderModalContent, formatPrice, parseCartItem, productImage }

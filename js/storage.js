@@ -72,4 +72,8 @@ function cartTotal(cart) {
    return cart.reduce((sum, item) => sum + Number(item.total), 0)
 }
 
-export { storageSave, storageRetrieve, storageRetrieveCart, cartAdd, cartRemove, cartUpdateQuantity, cartTotal }
+function cartClear() {
+   storageSave(CART_KEY, [])
+}
+
+export { storageSave, storageRetrieve, storageRetrieveCart, cartAdd, cartRemove, cartUpdateQuantity, cartTotal, cartClear }

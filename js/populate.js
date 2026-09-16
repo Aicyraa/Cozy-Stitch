@@ -12,7 +12,6 @@ class Crochet {
       rating,
       stock,
       date_added,
-      image,
    ) {
       this.id = id
       this.name = name
@@ -24,39 +23,10 @@ class Crochet {
       this.rating = rating
       this.stock = stock
       this.date_added = date_added
-      this.image = image
    }
 }
 
 export default function seed() {
-   const productImages = {
-      1: 'tulips.png',
-      2: 'tulips.png',
-      3: 'melody.png',
-      4: 'hello_kitty.png',
-      5: 'kuromi.png',
-      6: 'melody.png',
-      7: 'pompumpurin.png',
-      8: 'baemax.png',
-      9: 'pompumpurin.png',
-      10: 'kuromi.png',
-      11: 'hello_kitty.png',
-      12: 'tulips.png',
-      13: 'baemax.png',
-      14: 'melody.png',
-      15: 'tulips.png',
-      16: 'kuromi.png',
-      17: 'hello_kitty.png',
-      18: 'melody.png',
-      19: 'baemax.png',
-      20: 'pompumpurin.png',
-      21: 'baemax.png',
-      22: 'pompumpurin.png',
-      23: 'tulips.png',
-      24: 'hello_kitty.png',
-      25: 'melody.png',
-   }
-
    const data = [
       // Bags
       [
@@ -369,6 +339,6 @@ export default function seed() {
       ],
    ]
 
-   const instances = data.map(val => new Crochet(...val, productImages[val[0]]))
+   const instances = data.map(val => new Crochet(...val))
    storageSave('crochets', instances)
 }

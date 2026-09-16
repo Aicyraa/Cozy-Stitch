@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <!-- Cart Drawer -->
+      <!-- ===== Cart Drawer ===== -->
       <div class="cart-overlay" id="cartOverlay">
          <div class="cart-drawer">
             <div class="cart-drawer-header">
@@ -30,13 +30,13 @@
          </div>
       </div>
 
-      <!-- Navbar -->
+      <!-- ===== Navbar ===== -->
       <nav class="navbar">
          <div class="logo">
             <img src="assets/logo.png" alt="logo" />
          </div>
          <div class="nav-links">
-            <a href="index.html" class="">Home</a>
+            <a href="index.html" class="active" aria-current="page">Home</a>
             <a href="pages/crochet.html">Crochets</a>
             <a href="pages/about.html">About</a>
          </div>
@@ -51,6 +51,7 @@
       <!-- Main Content -->
 
       <main>
+         <!-- Hero -->
          <section class="hero">
             <div class="hero-content">
                <h1>Cozy Creations Made Just for You</h1>
@@ -76,22 +77,27 @@
             </div>
 
             <div class="hero-visual">
-                <img src="/assets/home_img.jfif" alt="Home Cozy Stitch">
+               <img src="assets/home_img.jfif" alt="Home Cozy Stitch">
             </div>
          </section>
 
+         <!-- Product Carousel -->
          <section class="product-carousel">
-            <div>
+            <div class="best-header">
                <img src="assets/icon_1_heart.png" alt="" />
-               <h4>Best Seller</h4>
+               <div class="best-title">
+                  <h4>Best Seller</h4>
+                  <p>Our most-loved crochet pieces</p>
+               </div>
             </div>
             <div class="carousel-viewport">
                <div class="carousel-track">
-                  <!-- Best seller cards are injected by js/pages/home.js -->
+                  <!-- Cards injected by js/pages/home.js -->
                </div>
             </div>
          </section>
 
+         <!-- Crochet Showcase -->
          <section class="crochet-section">
             <div class="crochet-content">
                <p>
@@ -104,13 +110,11 @@
                   <img src="./assets/crochets/tulips.png" alt="" />
                   <img src="./assets/crochets/pompumpurin.png" alt="" />
                </div>
-               
             </div>
          </section>
-
       </main>
 
-      <!-- Footer -->
+      <!-- ===== Footer ===== -->
       <footer class="footer">
          <div class="footer-container">
             <div class="footer-brand">

@@ -1,0 +1,86 @@
+/* ===== Product Card ===== */
+
+.product-card {
+   position: relative;
+   aspect-ratio: 4 / 5;
+   border-radius: var(--radius-md);
+   overflow: hidden;
+   background-color: var(--surface);
+   background-size: cover;
+   background-position: center;
+   box-shadow: var(--shadow-card);
+   cursor: pointer;
+   transition:
+      transform var(--transition-base),
+      box-shadow var(--transition-base);
+}
+
+.product-card:hover,
+.product-card:focus-visible {
+   transform: translateY(-0.25rem);
+   box-shadow: var(--shadow-feature-hover);
+}
+
+.product-card::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.55) 22%,
+      rgba(0, 0, 0, 0.12) 55%,
+      rgba(0, 0, 0, 0) 70%
+   );
+}
+
+.card-info {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1;
+   padding: var(--space-2) var(--space-3) var(--space-3);
+   color: var(--white);
+}
+
+.card-size {
+   position: absolute;
+   top: var(--space-2);
+   right: var(--space-2);
+   z-index: 1;
+   padding: 0.3rem 0.75rem;
+   border-radius: var(--radius-full);
+   background-color: var(--accent);
+   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.25);
+   font-family: var(--font-body);
+   font-size: var(--fs-xs);
+   font-weight: 700;
+   letter-spacing: 0.04rem;
+   text-transform: uppercase;
+   line-height: 1;
+   color: var(--primary-deep);
+}
+
+.card-name {
+   font-family: var(--font-heading);
+   font-size: 1.25rem;
+   font-weight: 700;
+   line-height: 1.2;
+   margin: 0.2rem 0 0.35rem;
+   text-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.55);
+}
+
+.card-bottom {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-family: var(--font-body);
+   font-size: var(--fs-sm);
+}
+
+.card-price {
+   font-family: var(--font-body);
+   font-size: 1.125rem;
+   font-weight: 800;
+}
