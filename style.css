@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courgette&family=Major+Mono+Display&family=Quicksand&display=swap');
 
 /* Design tokens & base */
 
@@ -60,6 +61,7 @@
    --font-heading: "Comfortaa", sans-serif;
    --font-body: "Nunito", sans-serif;
    --font-description: "Quicksand", sans-serif;
+   --font-logo: "Courgette", cursive;
 
    /* font sizes */
    --fs-xs: 0.6875rem;

@@ -19,11 +19,20 @@
    display: flex;
    align-items: center;
    gap: var(--space-1);
+   margin-left: var(--space-5);
 }
 
 .logo img {
    height: 3rem;
    width: auto;
+}
+
+.logo h1 {
+   font-family: var(--font-logo);
+   font-weight: 400;
+   font-size: 1.25rem;
+   color: var(--primary);
+   margin: 0 0 0 .20rem;
 }
 
 /* Nav Links */
@@ -97,7 +106,7 @@
 }
 
 .cart img {
-   height: 1.875rem;
+   height: 2.7rem;
    transform-origin: center;
    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
