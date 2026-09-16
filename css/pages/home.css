@@ -1,8 +1,6 @@
-/* hero */
+/* ===== Home Page ===== */
 
-main {
-   overflow: hidden;
-}
+/* Hero */
 
 .hero {
    display: flex;
@@ -33,7 +31,23 @@ main {
    margin-top: 1rem;
 }
 
-/* button */
+.hero-visual {
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+
+.hero-visual img {
+   width: 40rem;
+   height: 32rem;
+   border-radius: 20px;
+   object-fit: cover;
+}
+
+/* Shop Button */
+
 .shop-btn {
    display: inline-block;
    margin-top: var(--space-4);
@@ -53,23 +67,7 @@ main {
    background-color: var(--accent-hover);
 }
 
-/* hero-right */
-.hero-visual {
-   width: 70%;
-   display: flex;
-   flex-direction: column;
-   justify-content: start;
-   align-items: center;
-}
-
-.hero-visual img{
-   width: 40rem;
-   height: 32rem;
-   border-radius: 20px;
-   object-fit: cover;
-}
-
-/* hero-stats */
+/* Hero Stats */
 
 .hero-stats {
    display: flex;
@@ -101,7 +99,7 @@ main {
    color: var(--primary-deep);
 }
 
-/* Best Product Carousel */
+/* Best Sellers Carousel */
 
 .product-carousel {
    padding: var(--space-1) 0 4.0625rem;
@@ -115,11 +113,11 @@ main {
    gap: var(--space-4);
    color: var(--primary);
    margin: 0 0 var(--space-6) 5.25rem;
+}
 
-   img {
-      height: 2.25rem;
-      width: auto;
-   }
+.best-header img {
+   height: 2.25rem;
+   width: auto;
 }
 
 .best-header::after {
@@ -141,10 +139,6 @@ main {
    font-family: var(--font-description);
    font-size: 0.9375rem;
    color: var(--primary-deep);
-}
-
-.product-carousel .product-card {
-   background-color: #e7d3cc;
 }
 
 .carousel-viewport {
@@ -180,34 +174,16 @@ main {
    }
 }
 
-.product-card {
-   position: relative;
+/* Carousel Card Sizing */
+
+.product-carousel .product-card {
    width: 16.875rem;
    height: 21.875rem;
-   border-radius: var(--radius-md);
-   overflow: hidden;
    flex: 0 0 auto;
-   background-color: var(--surface);
-   box-shadow: var(--shadow-card);
+   background-color: #e7d3cc;
 }
 
-@media (prefers-reduced-motion: reduce) {
-   .carousel-track {
-      animation: none;
-      flex-wrap: wrap;
-   }
-
-   .carousel-set {
-      width: 100%;
-      flex-wrap: wrap;
-   }
-
-   .carousel-set:nth-child(2) {
-      display: none;
-   }
-}
-
-/* crochet scroll 2 */
+/* Crochet Showcase */
 
 .crochet-section {
    padding: 0 2rem;
@@ -223,9 +199,7 @@ main {
    color: var(--primary-deep);
 }
 
-/* ====================111==========
-   IMAGE
-================================= */
+/* Crochet Showcase Images */
 
 .crochet-image {
    position: relative;
@@ -273,3 +247,113 @@ main {
    z-index: 1;
 }
 
+/* Responsive */
+
+@media (max-width: 900px) {
+   .hero {
+      padding: 3.125rem 6%;
+   }
+
+   .hero-content h1 {
+      font-size: 3.125rem;
+   }
+}
+
+@media (max-width: 700px) {
+   .hero {
+      flex-direction: column;
+
+      text-align: center;
+      padding: 3.75rem 6%;
+   }
+
+   .hero-content {
+      width: 100%;
+      max-width: 37.5rem;
+
+      align-items: center;
+   }
+
+   .hero-content h1 {
+      font-size: 2.625rem;
+   }
+
+   .hero-content p {
+      font-size: 1rem;
+   }
+
+   .hero-visual {
+      width: 100%;
+
+      min-height: 21.875rem;
+      margin-top: var(--space-7);
+   }
+}
+
+@media (max-width: 450px) {
+   .hero {
+      padding: 2.8125rem 5%;
+   }
+
+   .hero-content h1 {
+      font-size: 2.125rem;
+   }
+
+   .hero-content p {
+      font-size: 0.9375rem;
+   }
+
+   .shop-btn {
+      padding: 0.75rem 1.75rem;
+   }
+
+   .hero-visual {
+      min-height: 17.5rem;
+   }
+}
+
+@media (max-width: 900px) {
+   .best-header {
+      margin-left: 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .best-title h4 {
+      font-size: 1.625rem;
+   }
+}
+
+@media (max-width: 500px) {
+   .product-carousel {
+      padding: var(--space-7) 0 2.8125rem;
+   }
+
+   .best-title h4 {
+      font-size: 1.375rem;
+      margin-bottom: 1.375rem;
+   }
+
+   .product-carousel .product-card {
+      width: 13.75rem;
+      height: 18.75rem;
+   }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+   .carousel-track {
+      animation: none;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set {
+      width: 100%;
+      flex-wrap: wrap;
+   }
+
+   .carousel-set:nth-child(2) {
+      display: none;
+   }
+}

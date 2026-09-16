@@ -1,47 +1,48 @@
-/*About*/
+/* ===== About Page ===== */
 
+/* About Hero */
 
 .about-hero-content {
-    width: 100%;
-    padding: 0 6%;
-    display: flex;
-    justify-content: center;
-    margin-top: -1rem;
+   width: 100%;
+   padding: 0 6%;
+   display: flex;
+   justify-content: center;
+   margin-top: -1rem;
 }
 
 .about-text {
-    width: 100%;
-    max-width: 80rem;
-    padding: 3.5rem 4rem;
-    
-    text-align: center
+   width: 100%;
+   max-width: 80rem;
+   padding: 3.5rem 4rem;
+
+   text-align: center;
 }
 
 /* Small label above the heading */
 .about-label {
-    display: block;
-    margin-bottom: 1rem;
-    
-    font-family: var(--font-description);
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    letter-spacing: 0.2rem;
-    
-    color: var(--accent);
+   display: block;
+   margin-bottom: 1rem;
+
+   font-family: var(--font-description);
+   font-size: var(--fs-sm);
+   font-weight: 700;
+   letter-spacing: 0.2rem;
+
+   color: var(--accent);
 }
 
 /* Main heading */
 .about-text h1 {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    
-    font-family: var(--font-heading);
-    font-size: 60px;
-    line-height: 1.2;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    
-    color: var(--primary-deep);
+   max-width: 700px;
+   margin: 0 auto 2rem;
+
+   font-family: var(--font-heading);
+   font-size: 60px;
+   line-height: 1.2;
+   font-weight: bold;
+   letter-spacing: 0.2rem;
+
+   color: var(--primary-deep);
 }
 
 .about-visual-placeholder {
@@ -66,35 +67,36 @@
 
 /* Paragraphs */
 .about-text p {
-    max-width: 700px;
-    margin: 0 auto 1.3rem;
+   max-width: 700px;
+   margin: 0 auto 1.3rem;
 
-    font-family: var(--font-description);
-    font-size: 1.05rem;
-    line-height: 1.8;
+   font-family: var(--font-description);
+   font-size: 1.05rem;
+   line-height: 1.8;
 
-    color: var(--primary-deep);
+   color: var(--primary-deep);
 }
 
 .about-text p:last-child {
-    margin-bottom: 0;
+   margin-bottom: 0;
 }
 
+/* Intro */
 
 .section-label {
-    display: block;
-    margin-bottom: 1rem;
-    text-align: center;
+   display: block;
+   margin-bottom: 1rem;
+   text-align: center;
 
-    font-family: var(--font-description);
-    font-size: var(--fs-md);
-    font-weight: bold;
-    letter-spacing: 0.2rem;
+   font-family: var(--font-description);
+   font-size: var(--fs-md);
+   font-weight: bold;
+   letter-spacing: 0.2rem;
 
-    color: var(--accent);
+   color: var(--accent);
 }
 
-.about-intro p{
+.about-intro p {
    font-size: var(--fs-md);
    line-height: 1.7;
    font-family: var(--font-body);
@@ -104,100 +106,100 @@
    text-align: center;
 }
 
+/* Story */
 
 .story-section {
-    width: 100%;
-    margin: 0 auto;
-    padding: 4rem 4% 7rem;
-    display: grid;
-    grid-template-columns: 0.75fr 1.4fr;
-    gap: 5rem;
-    align-items: center;
+   width: 100%;
+   margin: 0 auto;
+   padding: 4rem 4% 7rem;
+   display: grid;
+   grid-template-columns: 0.75fr 1.4fr;
+   gap: 5rem;
+   align-items: center;
 }
-
 
 /* Left heading */
 
 .story-heading h2 {
-    font-family: var(--font-heading);
-    color: var(--primary);
-    font-size: var(--fs-3xl);
-    line-height: 1.15;
-    font-weight: 600;
-    margin-left: 5rem;
-    margin-bottom: 4rem;
+   font-family: var(--font-heading);
+   color: var(--primary);
+   font-size: var(--fs-3xl);
+   line-height: 1.15;
+   font-weight: 600;
+   margin-left: 5rem;
+   margin-bottom: 4rem;
 }
 
 .story-heading-line {
-    width: 30%;
-    height: 5px;
-    background-color: var(--primary);
-    margin-left: 5rem;
+   width: 30%;
+   height: 5px;
+   background-color: var(--primary);
+   margin-left: 5rem;
 }
+
 /* Story content */
 
 .story-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background-color: var(--surface);
-    
-    align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+   border: 1px solid var(--border);
+   border-radius: var(--radius-lg);
+   background-color: var(--surface);
 
-    margin-right: 5rem;
-    padding: 3rem;
+   align-items: center;
+
+   margin-right: 5rem;
+   padding: 3rem;
 }
-
 
 /* Image */
 
 .story-image {
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--radius-md);
+   width: 100%;
+   overflow: hidden;
+   border-radius: var(--radius-md);
 }
 
 .story-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 /* Story text */
 
 .story-text {
-    padding: 0.1rem;
-    color: var(--primary);
+   padding: 0.1rem;
+   color: var(--primary);
 }
 
 .story-year {
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: var(--pink-dark);
+   display: block;
+   margin-bottom: 1rem;
+   font-size: 0.65rem;
+   font-weight: 700;
+   letter-spacing: 0.15em;
+   color: var(--accent);
 }
 
 .story-text h3 {
-    margin-bottom: 1rem;
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    line-height: 1.3;
-    color: var(--brown);
+   margin-bottom: 1rem;
+   font-family: var(--font-heading);
+   font-size: 1.5rem;
+   line-height: 1.3;
+   color: var(--primary);
 }
 
 .story-text p {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.75;
-    color: var(--brown-light);
+   margin-bottom: 1rem;
+   font-size: 0.9rem;
+   line-height: 1.75;
+   color: var(--primary-deep);
 }
 
+/* Features */
 
-/* FEATURES SECTION */
 .features {
    max-width: 75rem;
    margin: -8rem auto auto auto;
@@ -210,7 +212,7 @@
    gap: 1.5625rem;
 }
 
-.features > h1{
+.features > h1 {
    text-align: left;
    margin-bottom: 3.5rem;
    color: var(--primary);
@@ -273,4 +275,3 @@
    line-height: 1.4;
    color: var(--primary);
 }
-

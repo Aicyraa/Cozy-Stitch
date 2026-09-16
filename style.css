@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+/* Design tokens & base */
+
+@import url('css/base.css');
 @import url('css/navbar.css');
 @import url('css/footer.css');
-@import url('css/pages/responsive.css');
+@import url('css/cart.css');
+@import url('css/components/product-card.css');
 @import url('css/pages/home.css');
 @import url('css/pages/about.css');
-
 @import url('css/pages/crochet.css');
-
-@import url('css/cart.css');
-
-html {
-   font-size: 100%;
-}
 
 :root {
    /* colors */
@@ -83,22 +81,4 @@ html {
    /* transitions */
    --transition-fast: 220ms ease;
    --transition-base: 300ms ease;
-}
-
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-body {
-   font-family: var(--font-body);
-   background-color: var(--bg);
-}
-
-h1,
-h2,
-h3,
-h4 {
-   font-family: var(--font-heading);
 }

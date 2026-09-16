@@ -1,4 +1,4 @@
-/* Footer */
+/* ===== Footer ===== */
 
 .footer {
    background-color: var(--primary);
@@ -61,7 +61,7 @@
    transform: translateX(0.1875rem);
 }
 
-/* Bottom bar */
+/* Bottom Bar */
 
 .footer-bottom {
    border-top: 0.0625rem solid var(--on-dark-line);
