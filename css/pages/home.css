@@ -105,29 +105,46 @@ main {
 
 .product-carousel {
    padding: var(--space-1) 0 4.0625rem;
+   margin-top: var(--space-5);
    margin-bottom: -2.0625rem;
 }
 
-.product-carousel > div:first-child {
+.best-header {
    display: flex;
    align-items: center;
    gap: var(--space-4);
-   font-size: var(--fs-xl);
-   font-weight: bold;
    color: var(--primary);
    margin: 0 0 var(--space-6) 5.25rem;
 
    img {
-      height: 1.875rem;
+      height: 2.25rem;
       width: auto;
    }
 }
 
-.product-carousel > div:first-child::after {
+.best-header::after {
    content: '';
    flex: 1;
    height: 0.0625rem;
    background: var(--gradient-fade);
+}
+
+.best-title h4 {
+   font-size: var(--fs-2xl);
+   font-weight: bold;
+   color: var(--primary);
+   line-height: 1.1;
+}
+
+.best-title p {
+   margin-top: 0.25rem;
+   font-family: var(--font-description);
+   font-size: 0.9375rem;
+   color: var(--primary-deep);
+}
+
+.product-carousel .product-card {
+   background-color: #e7d3cc;
 }
 
 .carousel-viewport {

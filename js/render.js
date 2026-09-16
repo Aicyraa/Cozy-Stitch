@@ -18,7 +18,6 @@ function parseProduct(product) {
          style="background-image:url('${productImage(product)}')">
          <span class="card-size"> ${product.size} </span>
          <div class="card-info">
-            <p class="card-category"> ${product.category}</p>
             <h3 class="card-name">${product.name}</h3>
             <div class="card-bottom">
                <p class="card-price">${formatPrice(product.price)}</p>

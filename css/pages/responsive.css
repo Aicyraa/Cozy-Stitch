@@ -124,8 +124,14 @@
 }
 
 /* product carousel */
+@media (max-width: 900px) {
+   .best-header {
+      margin-left: 0;
+   }
+}
+
 @media (max-width: 768px) {
-   .product-carousel h4 {
+   .best-title h4 {
       font-size: 1.625rem;
    }
 }
@@ -135,7 +141,7 @@
       padding: var(--space-7) 0 2.8125rem;
    }
 
-   .product-carousel h4 {
+   .best-title h4 {
       font-size: 1.375rem;
       margin-bottom: 1.375rem;
    }
