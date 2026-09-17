@@ -5,7 +5,7 @@ function slugify(name) {
 }
 
 function productImage(product) {
-   return `../assets/products/${slugify(product.name)}-removebg-preview.png`
+   return `../assets/products/${slugify(product.name)}.png`
 }
 
 export { slugify, productImage }
