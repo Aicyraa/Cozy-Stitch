@@ -389,8 +389,8 @@ export default function seed() {
       ],
       [
          30,
-         'Pumpoporin',
-         'Golden-brown crochet Pumpoporin plush with his little beret',
+         'Pompompurin',
+         'Golden-brown crochet Pompompurin plush with his little beret',
          'anime',
          24.0,
          'Medium',
