@@ -1,8 +1,7 @@
 /* ===================== Imports ===================== */
 
-import { storageRetrieve } from '../storage.js'
-import { parseProduct } from '../render.js'
-import seed from '../populate.js'
+import { getProducts } from '../data/products.js'
+import { parseProduct } from '../components/product-card.js'
 
 /* ===================== Config ===================== */
 
@@ -27,17 +26,10 @@ function renderCarousel(track, products) {
 }
 
 function renderBestSellers() {
-   let data = storageRetrieve('crochets')
-   if (!data) {
-      seed()
-      data = storageRetrieve('crochets')
-   }
-
    const track = document.querySelector('.carousel-track')
    if (!track) return
 
-   const products = getBestSellers(data || [])
-   renderCarousel(track, products)
+   renderCarousel(track, getBestSellers(getProducts()))
 }
 
 /* ===================== Init ===================== */

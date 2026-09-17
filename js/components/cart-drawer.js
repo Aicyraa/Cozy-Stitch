@@ -6,9 +6,10 @@ import {
    cartUpdateQuantity,
    cartTotal,
    cartClear,
-} from './storage.js'
-import { parseCartItem, formatPrice } from './render.js'
-import { createModal } from './helper.js'
+} from '../store/cart-store.js'
+import { parseCartItem } from './product-card.js'
+import { formatPrice } from '../utils/format.js'
+import { createModal } from './dialog.js'
 
 /* ===================== DOM References ===================== */
 
@@ -24,6 +25,9 @@ const drawer = createModal(cartOverlay, cartClose)
 
 /* ===================== Rendering ===================== */
 
+const EMPTY_CART_MESSAGE =
+   '<p class="cart-empty">Your cart is empty. Add some cozy pieces!</p>'
+
 function getCartCount(cart) {
    return cart.reduce((sum, item) => sum + item.quantity, 0)
 }
@@ -38,15 +42,14 @@ function renderCart() {
    const cart = storageRetrieveCart()
 
    if (cart.length === 0) {
-      itemsEl.innerHTML =
-         '<p class="cart-empty">Your cart is empty. Add some cozy pieces!</p>'
+      itemsEl.innerHTML = EMPTY_CART_MESSAGE
       checkoutBtn.disabled = true
    } else {
       itemsEl.innerHTML = cart.map(parseCartItem).join('')
       checkoutBtn.disabled = false
    }
 
-   totalEl.textContent = formatPrice(cartTotal(cart))
+   totalEl.innerHTML = formatPrice(cartTotal(cart))
    renderBadge(cart)
 }
 

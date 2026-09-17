@@ -1,16 +1,7 @@
-/* ===================== Product Cards ===================== */
+import { formatPrice } from '../utils/format.js'
+import { productImage } from '../utils/image.js'
 
-function formatPrice(value) {
-   return `₱${Number(value).toFixed(2)}`
-}
-
-function slugify(name) {
-   return name.toLowerCase().split(/\s+/).join('_')
-}
-
-function productImage(product) {
-   return `../assets/products/${slugify(product.name)}-removebg-preview.png`
-}
+/* ===================== Product Card ===================== */
 
 function parseProduct(product) {
    return `
@@ -27,19 +18,7 @@ function parseProduct(product) {
    `
 }
 
-/* ===================== Modal Content ===================== */
-
-function renderModalContent(product, els) {
-   els.image.style.backgroundImage = `url('${productImage(product)}')`
-   els.category.textContent = product.category
-   els.name.textContent = product.name
-   els.rating.innerHTML = `★ <span class="rating-value">${product.rating}</span>`
-   els.size.textContent = product.size
-   els.description.textContent = product.description
-   els.price.innerHTML = formatPrice(product.price)
-}
-
-/* ===================== Cart Items ===================== */
+/* ===================== Cart Item ===================== */
 
 function parseCartItem(item) {
    const { id, product, quantity, total } = item
@@ -75,4 +54,4 @@ function parseCartItem(item) {
    `
 }
 
-export { parseProduct, renderModalContent, formatPrice, parseCartItem, productImage }
+export { parseProduct, parseCartItem }

@@ -1,17 +1,8 @@
-/* ===================== Storage ===================== */
-
-const CART_KEY = 'cart'
-
-function storageSave(key, data) {
-   localStorage.setItem(key, JSON.stringify(data))
-}
-
-function storageRetrieve(key) {
-   const raw = localStorage.getItem(key)
-   return raw ? JSON.parse(raw) : null
-}
+import { storageSave, storageRetrieve } from '../core/storage.js'
 
 /* ===================== Cart ===================== */
+
+const CART_KEY = 'cart'
 
 function normalizeCart(cart) {
    return cart.map(item => {
@@ -76,4 +67,11 @@ function cartClear() {
    storageSave(CART_KEY, [])
 }
 
-export { storageSave, storageRetrieve, storageRetrieveCart, cartAdd, cartRemove, cartUpdateQuantity, cartTotal, cartClear }
+export {
+   storageRetrieveCart,
+   cartAdd,
+   cartRemove,
+   cartUpdateQuantity,
+   cartTotal,
+   cartClear,
+}
