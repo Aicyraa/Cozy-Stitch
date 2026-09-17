@@ -39,37 +39,8 @@
                </svg>
             </button>
 
-            <div class="modal-image"></div>
-
-            <div class="modal-details">
-               <div class="modal-topline">
-                  <p class="modal-category"></p>
-                  <span class="modal-rating"></span>
-               </div>
-               <h2 class="modal-name"></h2>
-
-               <p class="modal-size-line">Size · <span class="modal-size"></span></p>
-
-               <p class="modal-description"></p>
-
-               <div class="modal-buy">
-                  <div class="modal-price-row">
-                     <p class="modal-price"></p>
-                     <div class="modal-buy-controls">
-                        <div class="quantity-control">
-                           <button type="button" class="qty-decrease" aria-label="Decrease quantity">
-                              &minus;
-                           </button>
-                           <span class="quantity-value">1</span>
-                           <button type="button" class="qty-increase" aria-label="Increase quantity">
-                              +
-                           </button>
-                        </div>
-                     </div>
-                  </div>
-
-                  <button type="button" class="add-to-cart-btn">Add to Cart</button>
-               </div>
+            <div id="modalBody">
+               <!-- Product details injected by js/pages/crochet.js -->
             </div>
          </div>
       </div>
@@ -237,6 +208,6 @@
       </footer>
 
       <script type="module" src="../js/pages/crochet.js"></script>
-      <script type="module" src="../js/cart.js"></script>
+      <script type="module" src="../js/components/cart-drawer.js"></script>
    </body>
 </html>

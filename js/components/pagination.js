@@ -1,71 +1,6 @@
-/* ===================== Modal ===================== */
-
-export function createQuantityControl(
-   { valueEl, decreaseBtn, increaseBtn },
-   { min = 1 } = {},
-) {
-   let quantity = min
-   let max = Infinity
-
-   function clamp(value) {
-      return Math.min(Math.max(value, min), max)
-   }
-
-   function render() {
-      valueEl.textContent = quantity
-      decreaseBtn.disabled = quantity <= min
-      increaseBtn.disabled = quantity >= max
-   }
-
-   function setQuantity(value) {
-      quantity = clamp(value)
-      render()
-   }
-
-   function setMax(value) {
-      max = value
-      setQuantity(quantity)
-   }
-
-   function reset() {
-      setQuantity(min)
-   }
-
-   decreaseBtn.addEventListener('click', () => setQuantity(quantity - 1))
-   increaseBtn.addEventListener('click', () => setQuantity(quantity + 1))
-
-   return { get quantity() { return quantity }, setQuantity, setMax, reset }
-}
-
-export function createModal(overlayEl, closeBtnEl) {
-   function open() {
-      overlayEl.classList.add('active')
-   }
-
-   function close() {
-      overlayEl.classList.remove('active')
-   }
-
-   function isOpen() {
-      return overlayEl.classList.contains('active')
-   }
-
-   closeBtnEl.addEventListener('click', close)
-
-   overlayEl.addEventListener('click', event => {
-      if (event.target === overlayEl) close()
-   })
-
-   document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') close()
-   })
-
-   return { open, close, isOpen }
-}
-
 /* ===================== Pagination ===================== */
 
-export function createPagination(container, { pageSize = 8 } = {}) {
+function createPagination(container, { pageSize = 8 } = {}) {
    let currentPage = 1
    let totalItems = 0
    let onPageChange = null
@@ -130,3 +65,5 @@ export function createPagination(container, { pageSize = 8 } = {}) {
       },
    }
 }
+
+export { createPagination }
